@@ -1,0 +1,76 @@
+header {
+    background-image: url("../img/kitchen-731351_1920.jpg");
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    /* background-attachment: fixed; */
+}
+
+header h1 {
+    position: absolute;
+    bottom: 20%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #fff;
+    ;
+}
+
+header a {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    transition: .2s;
+}
+
+header a:hover {
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 45px;
+}
+
+main {
+    margin: 50px 0;
+}
+
+main section {
+    margin-top: 50px;
+}
+
+main h1 {
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+main div.recipes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.recipes div.recipe {
+    flex-basis: 28%;
+    height: 250px;
+    background-color: #000;
+}
+
+main section.ads {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.ads div.ad {
+    flex-basis: 40%;
+    height: 250px;
+    background-color: #000;
+}

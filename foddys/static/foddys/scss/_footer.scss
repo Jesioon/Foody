@@ -1,0 +1,61 @@
+.mainFooter {
+    margin-top: 150px;
+    height: 180px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+.mainFooter h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+
+}
+
+.mainFooter section {
+    display: flex;
+}
+
+.mainFooter section div {
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.mainFooter .contact p {
+    padding-top: 20px;
+}
+
+.links {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainFooter .links a {
+    // display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px 10px;
+}
+
+.mainFooter i {
+    margin-right: 20px;
+    font-size: 20px;
+    vertical-align: -5px;
+}
+
+.mainFooter .links a:hover {
+    font-size: 22px;
+    border-bottom: 2px solid white;
+
+}
+
+.mainFooter>p:last-child {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?49868ed9c15fc302cc432a8ca4f226e6") format("truetype"),
+url("./flaticon.woff?49868ed9c15fc302cc432a8ca4f226e6") format("woff"),
+url("./flaticon.woff2?49868ed9c15fc302cc432a8ca4f226e6") format("woff2"),
+url("./flaticon.eot?49868ed9c15fc302cc432a8ca4f226e6#iefix") format("embedded-opentype"),
+url("./flaticon.svg?49868ed9c15fc302cc432a8ca4f226e6#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "github": "\f101",
+    "gmail": "\f102",
+    "linkedin": "\f103",
+    "telephone": "\f104",
+);
+
+.flaticon-github:before {
+    content: map-get($flaticon-map, "github");
+}
+.flaticon-gmail:before {
+    content: map-get($flaticon-map, "gmail");
+}
+.flaticon-linkedin:before {
+    content: map-get($flaticon-map, "linkedin");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
