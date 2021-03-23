@@ -22,22 +22,25 @@
         <a href="{% url 'foddys:index' %}" class='logo'>Foody</a>
         <div class="dropdown">
           <div class="dropdownContent">
-            <a href="#">Kuchnia polska</a>
-            <a href="#">Kuchnia włoska</a>
-            <a href="#">Kuchnia amerykańska</a>
-            <a href="#">Kuchnia chińska</a>
-            <a href="#">Kuchnia tajska</a>
-            <a href="#">Kuchnia azjatycka</a>
-            <a href="#">Kuchnia indyjska</a>
-            <a href="#">Kuchnia francuska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia polska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia włoska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia amerykańska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia chińska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia tajska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia azjatycka</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia indyjska</a>
+            <a href="{% url 'foddys:recipes' %}">Kuchnia francuska</a>
           </div>
-          <a href="#" class="recipeBtn">Przepisy</a>  
+          <!-- <a href="#" class="recipeBtn">Przepisy</a>   -->
+        <!-- <div class="recipeBtn"> -->
+          <span class="recipeBtn">Przepisy</span>
+        <!-- </div> -->
         </div>
         <div class="dropdownTime">
           <div class="dropdownTimeContent">
-            <a href="#">Śniadanie</a>
-            <a href="#">Obiad</a>
-            <a href="#">Kolacja</a>
+            <a href="{% url 'foddys:recipes' %}">Śniadanie</a>
+            <a href="{% url 'foddys:recipes' %}">Obiad</a>
+            <a href="{% url 'foddys:recipes' %}">Kolacja</a>
           </div>
           <a href="#" class="recipeTimeBtn">Pora dnia</a>
         </div>

@@ -1,142 +1,161 @@
-.mainNav {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 2;
-    border-bottom: 1px solid black;
-}
+// .mainNav {
+//     display: flex;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background-color: #fff;
+//     z-index: 2;
+//     border-bottom: 1px solid black;
+// }
 
-.mainNav a {
-    text-decoration: none;
-    font-size: 25px;
-    line-height: 65px;
-    display: block;
-}
+// .mainNav a,
+// .mainNav .recipeBtn {
+//     text-decoration: none;
+//     font-size: 25px;
+//     line-height: 65px;
+//     display: block;
+// }
 
-.mainNav>div {
-    flex-basis: 50%;
-    display: flex;
-}
 
-.left {
-    justify-content: flex-start;
-}
+// .mainNav>div {
+//     flex-basis: 50%;
+//     display: flex;
+// }
 
-.right {
-    justify-content: flex-end;
-}
+// .left {
+//     justify-content: flex-start;
+// }
 
-.recipeBtn,
-.signIn,
-.signUp,
-.logo,
-.recipeTimeBtn {
-    padding: 0 40px;
-    font-weight: 700;
-    transition: .2s;
-}
+// .right {
+//     justify-content: flex-end;
+// }
 
-.left .logo {
-    margin: 0 100px 0 10px;
-    color: #ff3800;
-    font-size: 45px;
-    font-style: italic;
-    letter-spacing: 2px;
-}
+// .recipeBtn,
+// .signIn,
+// .signUp,
+// .logo,
+// .recipeTimeBtn {
+//     padding: 0 40px;
+//     font-weight: 700;
+//     transition: .2s;
+// }
 
-.left .logo:hover {
-    font-size: 50px;
-    letter-spacing: 3px;
-}
+// .left .logo {
+//     margin: 0 90px 0 10px;
+//     color: #ff3800;
+//     font-size: 45px;
+//     font-style: italic;
+//     letter-spacing: 2px;
+// }
 
-.left .recipeBtn {
-    background-color: #00a9fc;
-    color: #fff;
-    transition: .3s;
-    margin-right: 40px;
-}
+// .left .logo:hover {
+//     font-size: 50px;
+//     letter-spacing: 3px;
+// }
 
-.left .recipeBtn:hover,
-.dropdownContent:hover+.recipeBtn {
-    background-color: #fff;
-    color: #00a9fc;
-}
+// .left .recipeBtn {
+//     background-color: #00a9fc;
+//     // background-color: #ff3800;
+//     color: #fff;
+//     transition: .3s;
+//     margin-right: 40px;
+// }
 
-.left .recipeTimeBtn {
-    color: #fff;
-    transition: .3s;
-    background-color: #000;
-}
+// .left .recipeBtn:hover,
+// .dropdownContent:hover+.recipeBtn {
+//     background-color: #fff;
+//     color: #00a9fc;
+// }
 
-.left .recipeTimeBtn:hover,
-.dropdownTimeContent:hover+.recipeTimeBtn {
-    background-color: #fff;
-    color: #00a9fc;
-}
+// .left .recipeTimeBtn {
+//     color: #fff;
+//     transition: .3s;
+//     background-color: #6c6ca7;
+//     // background-color: #727a9e;
+//     // background-color: #ff3800;
+// }
 
-.right .signUp {
-    margin-right: 50px;
-    background-color: #10ae4e;
-    color: #fff;
+// .left .recipeTimeBtn:hover,
+// .dropdownTimeContent:hover+.recipeTimeBtn {
+//     background-color: #fff;
+//     color: #6c6ca7;
+// }
 
-}
+// .right .signUp {
+//     margin-right: 50px;
+//     background-color: #10ae4e;
+//     // background-color: #33cccc;
+//     color: #fff;
 
-.right .signUp:hover {
-    color: #10ae4e;
-    background-color: #fff;
-}
+// }
 
-.right .signIn {
-    margin-right: 40px;
+// .right .signUp:hover {
+//     color: #10ae4e;
+//     background-color: #fff;
+// }
 
-    background-color: #ff3800;
-    color: #fff;
+// .right .signIn {
+//     margin-right: 40px;
 
-}
+//     background-color: #ff3800;
+//     color: #fff;
 
-.right .signIn:hover {
-    color: #ff3800;
-    background-color: #fff;
-}
+// }
 
-.dropdown,
-.dropdownTime {
-    position: relative;
-}
+// .right .signIn:hover {
+//     color: #ff3800;
+//     background-color: #fff;
+// }
 
-.dropdownContent,
-.dropdownTimeContent {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 300px;
-    background-color: #00a9fc;
-    top: 100%;
-    left: 0;
-    transform: scale(0);
-    transform-origin: 0 0;
-    transition: .3s;
-}
+// .dropdown,
+// .dropdownTime {
+//     position: relative;
+// }
 
-.dropdownContent a,
-.dropdownTimeContent a {
-    color: #fff;
-    font-size: 20px;
-    line-height: 50px;
-    padding-left: 20px;
-    transition: .3s;
-}
+// .dropdownContent,
+// .dropdownTimeContent {
+//     display: flex;
+//     flex-direction: column;
+//     position: absolute;
+//     width: 300px;
 
-.dropdown:hover .dropdownContent,
-.dropdownTime:hover .dropdownTimeContent {
-    transform: scale(1);
-}
+//     top: 100%;
+//     left: 0;
+//     transform: scale(0);
+//     transform-origin: 0 0;
+//     transition: .3s;
+// }
 
-.dropdownContent a:hover,
-.dropdownTimeContent a:hover {
-    padding-left: 45px;
-    font-size: 22px;
-}
+// .dropdownContent {
+//     background-color: #00a9fc;
+// }
+
+// .dropdownTimeContent {
+//     background-color: #6c6ca7;
+// }
+
+// .dropdownContent a,
+// .dropdownTimeContent a {
+//     color: #fff;
+//     font-size: 20px;
+//     line-height: 50px;
+//     padding-left: 20px;
+//     transition: .3s;
+// }
+
+// .dropdown:hover .dropdownContent,
+// .dropdownTime:hover .dropdownTimeContent {
+//     transform: scale(1);
+// }
+
+// .dropdownContent a:hover,
+// .dropdownTimeContent a:hover {
+//     padding-left: 45px;
+//     font-size: 22px;
+// }
+
+
+// .recipeBtn {
+//     font-size: 60px;
+// }

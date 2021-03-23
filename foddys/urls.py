@@ -8,4 +8,5 @@ app_name = 'foddys'
 urlpatterns = [
     #Homepage
     path('', views.index, name='index'),
+    path('/recipes', views.recipes, name='recipes'),
 ]

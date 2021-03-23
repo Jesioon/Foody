@@ -1,0 +1,36 @@
+header.recipesPage {
+    background-image: url("../img/recipesHeaderx1920.jpg");
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+    background-size: cover;
+    margin-top: 65px;
+    filter: brightness(0.7);
+}
+
+.recipesHeader {
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    top: 21%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+section.recipesList {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.recipesList div {
+    background-color: #000;
+    width: 380px;
+    height: 280px;
+    margin-bottom: 50px;
+}
