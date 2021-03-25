@@ -31,10 +31,7 @@
             <a href="{% url 'foddys:recipes' %}">Kuchnia indyjska</a>
             <a href="{% url 'foddys:recipes' %}">Kuchnia francuska</a>
           </div>
-          <!-- <a href="#" class="recipeBtn">Przepisy</a>   -->
-        <!-- <div class="recipeBtn"> -->
           <span class="recipeBtn">Przepisy</span>
-        <!-- </div> -->
         </div>
         <div class="dropdownTime">
           <div class="dropdownTimeContent">
@@ -42,12 +39,16 @@
             <a href="{% url 'foddys:recipes' %}">Obiad</a>
             <a href="{% url 'foddys:recipes' %}">Kolacja</a>
           </div>
-          <a href="#" class="recipeTimeBtn">Pora dnia</a>
+          <span class="recipeTimeBtn">Pora dnia</span>
         </div>
     </div>
     <div class="right">
-      <a href="#" class="signUp">Rejestracja</a>
-      <a href="#" class="signIn">Logowanie</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'users:logout' %}" class="signIn">Wyloguj</a>
+      {% else %}
+      <a href="{% url 'users:register' %}" class="signUp">Rejestracja</a>
+      <a href="{% url 'users:login' %}" class="signIn">Logowanie</a>
+      {% endif %}
     </div>
     </nav>
 

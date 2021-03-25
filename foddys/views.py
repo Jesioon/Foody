@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .models import Recipe
+
+from .forms import RecipeForm
 
 def index(request):
     """Homepage"""
@@ -8,3 +12,19 @@ def recipes(request):
     """Page with recipes lists"""
     return render(request, 'foddys/recipes.html')
 
+def recipe(request):
+    """Page with single recipe"""
+    return render(request, 'foddys/recipe.html')
+
+def new_recipe(request):
+    """Add new recipe as user"""
+    if request.method != 'POST':
+        form = RecipeForm()
+    else:
+        form = RecipeForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('foddys:index')
+
+    context = {'form': form}
+    return render(request, 'foddys/new_recipe.html', context)

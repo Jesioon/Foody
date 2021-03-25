@@ -1,0 +1,17 @@
+{% extends 'foddys/base.html' %}
+
+{% block content %}
+<div class="wrap">
+{% if form.errors %}
+<p>Nazwa użytkownika i hasło są nieprawidłowe. Proszę spróbować ponownie</p>
+{% endif %}
+<h1 class="logIn">Zaloguj się</h1>
+<form action="{% url 'users:login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button name='submit'>Zaloguj</button>
+    <input type='hidden' name='next' value='{% url "foddys:index" %}'>
+</form>
+</div>
+{% endblock content %}

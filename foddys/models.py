@@ -1,33 +1,54 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+# Part of a days
+class Meal(models.Model):
+    mealTime = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.mealTime
+
+# Countries where this dish is popular
+class WorldCuisine(models.Model):
+    country = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.country
+
+
 class Recipe(models.Model):
     """Recipes information"""
     recipe_name = models.CharField(max_length=50)
     publication_date = models.DateTimeField(auto_now_add=True)
-    time_need = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(600)]) 
-    # image = models.ImageField(upload_to='uploads/', height_field=440, width_field=800) #trzeba zmienić upload
-    
-    BREAKFAST = 'BR'
-    DINNER = 'DN'
-    SUPPER = 'SP'
-    PART_OF_A_DAY = [
-        (BREAKFAST, 'Śniadanie'),
-        (DINNER, 'Obiad'),
-        (SUPPER, 'Kolacja'),
+    time_need = models.IntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(600)], default=0)
+    portions = models.IntegerField(
+        validators=[MinValueValidator(1)], default=1)
+    DEFAULT_KEY = 0
+    day_key = models.ForeignKey(
+        Meal, on_delete=models.CASCADE, default=DEFAULT_KEY)
+    country_key = models.ForeignKey(
+        WorldCuisine, on_delete=models.CASCADE, default=DEFAULT_KEY)
+    # image = models.ImageField(upload_to='uploads/' ,default='uploads/defaultPhotox1920.jpg' ,height_field=440, width_field=800)
+
+    EASY = 'ES'
+    MEDIUM = 'MM'
+    HARD = 'HR'
+    LEVEL = [
+        ('ES', 'Łatwe'),
+        ('MM', 'Średnie'),
+        ('HR', 'Trudne'),
     ]
-    part_of_a_day = models.CharField(
-        max_length = 2, 
-        choices=PART_OF_A_DAY,
-        default=BREAKFAST
+    level = models.CharField(
+        max_length=2,
+        choices=LEVEL,
+        default='ES'
     )
 
     ingredients = models.TextField(max_length=400)
     recipe = models.TextField(max_length=1000)
 
-
     likes = 0
-    #poziom trudności, porcje
 
     def __str__(self):
         return self.recipe_name
