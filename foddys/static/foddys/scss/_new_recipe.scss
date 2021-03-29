@@ -1,0 +1,25 @@
+//  header.newRecipePage {
+//     background-image: url("../img/newRecipeHeaderx1920.jpg");
+//     width: 100%;
+//     overflow: hidden;
+//     height: 40vh;
+//     background-size: cover;
+//     // filter: brightness(0.7);
+//     position: relative;
+// }
+.wrap.testowanie {
+    background-image: url("../img/newRecipeHeaderx1920.jpg");
+    width: 100%;
+    overflow: hidden;
+    // height: 40vh;
+    background-size: cover;
+    // filter: brightness(0.7);
+    position: relative;
+}
+.ciemno {
+    background-color: rgba(0,0,0,0.35);
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding-bottom: 100px;
+}

@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import activate
 
 from .models import Recipe
-
 from .forms import RecipeForm
 
 
@@ -22,6 +22,7 @@ def recipe(request):
 @login_required
 def new_recipe(request):
     """Add new recipe as user"""
+    activate('pl')
     if request.method != 'POST':
         form = RecipeForm()
     else:

@@ -1,13 +1,18 @@
 {% extends 'foddys/base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
-<div class="wrap">
+<div class="wrap testowanie">
+<div class="ciemno">
 <h1 class='loginRegister'>Dodaj nowy przepis:</h1>
 
-<form action="{% url 'foddys:new_recipe' %}" class='loginRegister'  method="POST">
+<form action="{% url 'foddys:new_recipe' %}" class='loginRegisterForm'  method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button name='submit'>Dodaj przepis</button>
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button name='submit' class='btn btn-primary'>Dodaj przepis</button>
+    {% endbuttons %}
 </form>
+</div>
 </div>
 {% endblock content %}

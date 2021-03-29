@@ -1,5 +1,5 @@
 .mainFooter {
-    margin-top: 150px;
+    // margin-top: 150px;
     height: 180px;
     background-color: #000;
     color: #fff;
@@ -25,6 +25,7 @@
 
 .mainFooter .contact p {
     padding-top: 20px;
+    margin-bottom: 0;
 }
 
 .links {
@@ -58,4 +59,5 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 0;
 }

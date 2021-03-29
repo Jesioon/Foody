@@ -1,4 +1,4 @@
-header {
+header.mainHeader {
     background-image: url("../img/homepageHeaderx1920.jpg");
     position: relative;
     width: 100%;
@@ -10,7 +10,7 @@ header {
     /* background-attachment: fixed; */
 }
 
-header h1 {
+header.mainHeader h1 {
     position: absolute;
     bottom: 20%;
     left: 51%;
@@ -20,7 +20,7 @@ header h1 {
     ;
 }
 
-header a {
+header.mainHeader a {
     position: absolute;
     bottom: 7%;
     left: 50%;
@@ -33,7 +33,7 @@ header a {
     transition: .2s;
 }
 
-header a:hover {
+header.mainHeader a:hover {
     background-color: rgba(0, 0, 0, .3);
     font-size: 45px;
 }
