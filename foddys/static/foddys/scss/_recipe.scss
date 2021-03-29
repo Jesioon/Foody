@@ -11,7 +11,6 @@ div.wholeRecipe {
     margin-top: 50px;
     max-width: 100%;
     padding: 0 50px;
-    // background-color: gray;
 }
 
 div.ImageAndIngredients {
@@ -22,14 +21,12 @@ div.ImageAndIngredients {
 }
 
 div.recipeImg {
-    // background-color: #000;
     height: 400px; //tu będzie max-height
     width: 100%;
     margin-bottom: 50px;
 }
 
 div.recipeIngredients {
-    // background-color: yellow;
     height: 500px;
     width: 100%;
 }
@@ -43,16 +40,10 @@ div.wholeRecipe h2 {
 div.recipeIcons {
     width: 250px;
     height: 500px;
-    // background-color: blue;
     margin-right: 50px;
 }
 
 div.recipeSteps {
     min-height: 300px;
-    // background-color: red;
     flex-grow: 1;
 }
-
-// div.recipeSteps h2 {
-//     text-align: center;
-// }

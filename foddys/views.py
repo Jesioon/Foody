@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from .models import Recipe
 
 from .forms import RecipeForm
+
+
 
 def index(request):
     """Homepage"""
@@ -16,6 +19,7 @@ def recipe(request):
     """Page with single recipe"""
     return render(request, 'foddys/recipe.html')
 
+@login_required
 def new_recipe(request):
     """Add new recipe as user"""
     if request.method != 'POST':
@@ -23,7 +27,9 @@ def new_recipe(request):
     else:
         form = RecipeForm(data=request.POST)
         if form.is_valid():
-            form.save()
+            new_recipe = form.save(commit=False)
+            new_recipe.owner = request.user
+            new_recipe.save()
             return redirect('foddys:index')
 
     context = {'form': form}

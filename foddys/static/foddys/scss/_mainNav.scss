@@ -10,8 +10,7 @@
 }
 
 .mainNav a,
-.mainNav .recipeBtn,
-.mainNav .recipeTimeBtn {
+.mainNav .recipeBtn {
     text-decoration: none;
     font-size: 25px;
     line-height: 65px;
@@ -35,8 +34,7 @@
 .recipeBtn,
 .signIn,
 .signUp,
-.logo,
-.recipeTimeBtn {
+.logo {
     padding: 0 40px;
     font-weight: 700;
     transition: .2s;
@@ -55,30 +53,25 @@
     letter-spacing: 3px;
 }
 
-.left .recipeBtn {
+.left .recipeBtn, .dropdownContent {
     background-color: #00a9fc;
-    // background-color: #ff3800;
     color: #fff;
     transition: .3s;
     margin-right: 40px;
 }
 
-.left .recipeBtn:hover,
-.dropdownContent:hover+.recipeBtn {
+.left .recipeBtn.violet, .dropdownContent.violet {
+    background-color: #6c6ca7;
+}
+
+.left .recipeBtn.blue:hover,
+.dropdownContent:hover+.recipeBtn.blue{
     background-color: #fff;
     color: #00a9fc;
 }
 
-.left .recipeTimeBtn {
-    color: #fff;
-    transition: .3s;
-    background-color: #6c6ca7;
-    // background-color: #727a9e;
-    // background-color: #ff3800;
-}
-
-.left .recipeTimeBtn:hover,
-.dropdownTimeContent:hover+.recipeTimeBtn {
+.left .recipeBtn.violet:hover,
+.dropdownContent:hover+.recipeBtn.violet {
     background-color: #fff;
     color: #6c6ca7;
 }
@@ -86,9 +79,7 @@
 .right .signUp {
     margin-right: 50px;
     background-color: #10ae4e;
-    // background-color: #33cccc;
     color: #fff;
-
 }
 
 .right .signUp:hover {
@@ -98,10 +89,8 @@
 
 .right .signIn {
     margin-right: 40px;
-
     background-color: #ff3800;
     color: #fff;
-
 }
 
 .right .signIn:hover {
@@ -109,35 +98,64 @@
     background-color: #fff;
 }
 
-.dropdown,
-.dropdownTime {
+.right .recipeBtn.logOut {
+    margin-right: 80px;
+    // background-color: black;
+    position: relative;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.right .recipeBtn.logOut i {
+    color: #ff3800;
+    font-size: 40px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // transition: .2s;
+}
+
+.dropdownContent.logOut {
+    background-color: #ff3800;
+    left: -150px;
+    top: 100%;
+    width: 250px;
+}
+
+.right .recipeBtn:hover,
+.dropdownContent:hover+.recipeBtn.logOut {
+    background-color: #ff3800;
+    
+}
+
+.right .recipeBtn:hover i,
+.dropdownContent:hover+.recipeBtn.logOut i {
+    color: white;
+}
+
+.dropdown {
     position: relative;
 }
 
-.dropdownContent,
-.dropdownTimeContent {
+.dropdownContent {
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 300px;
-
     top: 100%;
     left: 0;
     transform: scale(0);
     transform-origin: 0 0;
-    transition: .3s;
+    // transition: .3s;
 }
 
-.dropdownContent {
-    background-color: #00a9fc;
+.dropdownContent.logOut {
+    transform-origin: 100% 0;;
 }
 
-.dropdownTimeContent {
-    background-color: #6c6ca7;
-}
-
-.dropdownContent a,
-.dropdownTimeContent a {
+.dropdownContent a {
     color: #fff;
     font-size: 20px;
     line-height: 50px;
@@ -145,13 +163,11 @@
     transition: .3s;
 }
 
-.dropdown:hover .dropdownContent,
-.dropdownTime:hover .dropdownTimeContent {
+.dropdown:hover .dropdownContent {
     transform: scale(1);
 }
 
-.dropdownContent a:hover,
-.dropdownTimeContent a:hover {
+.dropdownContent a:hover {
     padding-left: 45px;
     font-size: 22px;
 }

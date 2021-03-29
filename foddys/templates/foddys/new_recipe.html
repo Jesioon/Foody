@@ -1,11 +1,13 @@
 {% extends 'foddys/base.html' %}
 
 {% block content %}
-<p>Dodaj nowy przepis:</p>
+<div class="wrap">
+<h1 class='loginRegister'>Dodaj nowy przepis:</h1>
 
-<form action="{% url 'foddys:new_recipe' %}" method="POST">
+<form action="{% url 'foddys:new_recipe' %}" class='loginRegister'  method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <button name='submit'>Dodaj przepis</button>
 </form>
+</div>
 {% endblock content %}

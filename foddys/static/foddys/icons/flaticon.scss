@@ -2,11 +2,11 @@ $flaticon-font: "flaticon";
 
 @font-face {
     font-family: $flaticon-font;
-    src: url("./flaticon.ttf?49868ed9c15fc302cc432a8ca4f226e6") format("truetype"),
-url("./flaticon.woff?49868ed9c15fc302cc432a8ca4f226e6") format("woff"),
-url("./flaticon.woff2?49868ed9c15fc302cc432a8ca4f226e6") format("woff2"),
-url("./flaticon.eot?49868ed9c15fc302cc432a8ca4f226e6#iefix") format("embedded-opentype"),
-url("./flaticon.svg?49868ed9c15fc302cc432a8ca4f226e6#flaticon") format("svg");
+    src: url("./flaticon.ttf?aa2dbd035da0ef1822e60240d755a7d0") format("truetype"),
+url("./flaticon.woff?aa2dbd035da0ef1822e60240d755a7d0") format("woff"),
+url("./flaticon.woff2?aa2dbd035da0ef1822e60240d755a7d0") format("woff2"),
+url("./flaticon.eot?aa2dbd035da0ef1822e60240d755a7d0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?aa2dbd035da0ef1822e60240d755a7d0#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -25,6 +25,7 @@ $flaticon-map: (
     "gmail": "\f102",
     "linkedin": "\f103",
     "telephone": "\f104",
+    "user": "\f105",
 );
 
 .flaticon-github:before {
@@ -38,4 +39,7 @@ $flaticon-map: (
 }
 .flaticon-telephone:before {
     content: map-get($flaticon-map, "telephone");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
 }

@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("./flaticon.ttf?49868ed9c15fc302cc432a8ca4f226e6") format("truetype"),
-url("./flaticon.woff?49868ed9c15fc302cc432a8ca4f226e6") format("woff"),
-url("./flaticon.woff2?49868ed9c15fc302cc432a8ca4f226e6") format("woff2"),
-url("./flaticon.eot?49868ed9c15fc302cc432a8ca4f226e6#iefix") format("embedded-opentype"),
-url("./flaticon.svg?49868ed9c15fc302cc432a8ca4f226e6#flaticon") format("svg");
+    src: url("./flaticon.ttf?aa2dbd035da0ef1822e60240d755a7d0") format("truetype"),
+url("./flaticon.woff?aa2dbd035da0ef1822e60240d755a7d0") format("woff"),
+url("./flaticon.woff2?aa2dbd035da0ef1822e60240d755a7d0") format("woff2"),
+url("./flaticon.eot?aa2dbd035da0ef1822e60240d755a7d0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?aa2dbd035da0ef1822e60240d755a7d0#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -29,4 +29,7 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 }
 .flaticon-telephone:before {
     content: "\f104";
+}
+.flaticon-user:before {
+    content: "\f105";
 }
