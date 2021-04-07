@@ -1,0 +1,5 @@
+<form style='display: none;' method="post" action="{% url 'users:logout' %}">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{% url 'foddys:index' %}"/>
+    <button id="signOutBtn" type="submit">Logout</button>
+  </form>

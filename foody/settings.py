@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+from pathlib import Path, os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,11 +48,20 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware', 
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+class LocaleMiddleware(object):
+
+    def process_request(self, request):
+        language = translation.get_language_from_request(request)
+        translation.activate(language)
+        request.LANGUAGE_CODE = translation.get_language()
+
 
 ROOT_URLCONF = 'foody.urls'
 
@@ -125,3 +134,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_URL = 'users:login'
+
+MEDIA_URL = '/uploads/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')

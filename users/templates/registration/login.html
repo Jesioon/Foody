@@ -1,16 +1,16 @@
 {% extends 'foddys/base.html' %}
 {% load bootstrap4 %}
-
 {% block content %}
 <div class="wrap">
-<h1 class="loginRegister">Zaloguj się</h1>
-<form class="loginRegisterForm" method="POST" action="{% url 'users:login' %}">
+    <h1 class="loginRegister">Zaloguj się</h1>
+<form action="{% url 'users:login' %}" class='loginRegisterForm' method="POST">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
-    <button name='submit' class='btn btn-primary'>Zaloguj</button>
+    <button name='submit' class="btn btn-primary">Zaloguj</button>
     {% endbuttons %}
-    <input type='hidden' name='next' value='{% url "foddys:index" %}'>
+
+    <input type="hidden" name='next' value="{% url 'foddys:index' %}">
 </form>
 </div>
 {% endblock content %}

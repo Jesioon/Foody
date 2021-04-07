@@ -38,7 +38,8 @@ class Recipe(models.Model):
         WorldCuisine, on_delete=models.CASCADE, default=DEFAULT_KEY)
     
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    # image = models.ImageField(upload_to='uploads/' ,default='uploads/defaultPhotox1920.jpg' ,height_field=440, width_field=800)
+
+    image = models.ImageField(blank=True, default='defaultRecipex640.jpg')
 
     EASY = 'ES'
     MEDIUM = 'MM'

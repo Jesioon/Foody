@@ -16,4 +16,5 @@ class RecipeForm(forms.ModelForm):
             'level': 'Poziom trudności',
             'ingredients': 'Składniki',
             'recipe': 'Przepis',
+            'image': 'Zdjęcie'
         }
