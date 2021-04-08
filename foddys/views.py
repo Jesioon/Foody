@@ -2,19 +2,42 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
 
-from .models import Recipe
+from .models import Recipe, Meal, WorldCuisine
 from .forms import RecipeForm
+
+def recipeSort(amount_recipes, sortedList):
+    if not sortedList:
+        return []
+    readyList = []
+    for recipe in sortedList:
+        readyList.append(recipe)
+        if len(readyList) == amount_recipes:
+            break
+    return readyList
+
 
 def index(request):
     """Homepage"""
     recipes = Recipe.objects.order_by('-publication_date')
-    images = []
-    for recipe in recipes:
-        images.append(recipe.image)
-        if len(images) == 3:
-            break
+    meals = Meal.objects.all()
+    countries = WorldCuisine.objects.all()
 
-    context = {'images': images}
+    amount_recipes = 3
+    recipes_recent, recipes_quick, meals_context, countries_context = [], [], {}, {}
+
+    recipes_recent = recipeSort(amount_recipes, recipes)
+    recipes_quick = recipeSort(amount_recipes, recipes.order_by('time_need'))
+
+    
+    for meal in meals:
+        meals_context[meal.mealTime] = recipeSort(amount_recipes, meal.recipe_set.order_by('-publication_date'))
+
+    for country in countries:
+        countries_context[country.country] = recipeSort(amount_recipes, country.recipe_set.order_by('-publication_date'))
+
+    context = {'recipes_recent': recipes_recent, 'recipes_quick': recipes_quick, 'meals_context': meals_context, 'countries_context': countries_context}
+
+    print(meals_context)
     return render(request, 'foddys/index.html', context)
 
 def recipes(request):

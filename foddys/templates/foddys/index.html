@@ -6,34 +6,57 @@
     <a href="#">Jedzenie</a>
   </header>
   <main>
+    {% if recipes_recent %}
     <section>
       <h1>Ostatnio dodane</h1>
       <div class="recipes">
-
-        {% for image in images %}
-        <div class="recipe" style='background-image: url({{image.url}});'></div>
+        {% for recipe in recipes_recent %}
+        <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
         {% endfor %}
       </div>
     </section>
-    <section class="ads">
+    {% endif %}
+    <!-- <section class="ads">
       <div class="ad clearfix"></div>
       <div class="ad clearfix"></div>
-    </section>
+    </section> -->
+
+    {% if recipes_quick %}
     <section>
       <h1>Dania na szybko</h1>
       <div class="recipes">
-        <div class="recipe"></div>
-        <div class="recipe"></div>
-        <div class="recipe"></div>
+        {% for recipe in recipes_quick %}
+        <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+        {% endfor %}
       </div>
     </section>
-    <section>
-      <h1>Na słodko</h1>
-      <div class="recipes">
-        <div class="recipe"></div>
-        <div class="recipe"></div>
-        <div class="recipe"></div>
-      </div>
-    </section> 
+    {% endif %}
+  
+    {% for mealTime, recipes in meals_context.items %}
+      {% if recipes %}
+        <section>
+        <h1>{{mealTime}}</h1>
+        <div class="recipes">
+        {% for recipe in recipes %}
+          <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+        {% endfor %}
+        </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+
+    {% for country, recipes in countries_context.items %}
+      {% if recipes %}
+        <section>
+        <h1>Kuchnia {{country}}</h1>
+        <div class="recipes">
+          {% for recipe in recipes %}
+            <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+          {% endfor %}
+        </div>
+        </section>
+      {% endif %}
+
+    {% endfor %}
   </main>
 {% endblock content %}
