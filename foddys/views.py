@@ -1,12 +1,21 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
+
 from .models import Recipe
 from .forms import RecipeForm
 
 def index(request):
     """Homepage"""
-    return render(request, 'foddys/index.html')
+    recipes = Recipe.objects.order_by('-publication_date')
+    images = []
+    for recipe in recipes:
+        images.append(recipe.image)
+        if len(images) == 3:
+            break
+
+    context = {'images': images}
+    return render(request, 'foddys/index.html', context)
 
 def recipes(request):
     """Page with recipes lists"""
@@ -22,7 +31,7 @@ def new_recipe(request):
     if request.method != 'POST':
         form = RecipeForm()
     else:
-        form = RecipeForm(data=request.POST)
+        form = RecipeForm(request.POST, request.FILES)
         if form.is_valid():
             new_recipe = form.save(commit=False)
             new_recipe.owner = request.user

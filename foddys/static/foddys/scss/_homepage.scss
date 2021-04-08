@@ -7,7 +7,6 @@ header.mainHeader {
     background-size: cover;
     overflow: hidden;
     z-index: 1;
-    /* background-attachment: fixed; */
 }
 
 header.mainHeader h1 {
@@ -63,6 +62,10 @@ div.recipes div.recipe {
     flex-basis: 28%;
     height: 250px;
     background-color: #000;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
 }
 
 main section.ads {

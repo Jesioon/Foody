@@ -9,9 +9,10 @@
     <section>
       <h1>Ostatnio dodane</h1>
       <div class="recipes">
-        <div class="recipe"></div>
-        <div class="recipe"></div>
-        <div class="recipe"></div>
+
+        {% for image in images %}
+        <div class="recipe" style='background-image: url({{image.url}});'></div>
+        {% endfor %}
       </div>
     </section>
     <section class="ads">

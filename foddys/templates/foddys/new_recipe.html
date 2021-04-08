@@ -6,7 +6,7 @@
 <div class="ciemno">
 <h1 class='loginRegister'>Dodaj nowy przepis:</h1>
 
-<form action="{% url 'foddys:new_recipe' %}" class='loginRegisterForm'  method="POST">
+<form enctype="multipart/form-data" action="{% url 'foddys:new_recipe' %}" class='loginRegisterForm'  method="POST">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}

@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 # Part of a days
 
-
 class Meal(models.Model):
     mealTime = models.CharField(max_length=20)
 
@@ -13,13 +12,11 @@ class Meal(models.Model):
 
 # Countries where this dish is popular
 
-
 class WorldCuisine(models.Model):
     country = models.CharField(max_length=20)
 
     def __str__(self):
         return self.country
-
 
 class Recipe(models.Model):
     """Recipes information"""
