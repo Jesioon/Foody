@@ -3,11 +3,13 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
 
+from .forms import NewUserForm
+
 def register(request):
     if request.method != 'POST':
-        form = UserCreationForm()
+        form = NewUserForm()
     else:
-        form = UserCreationForm(data=request.POST)
+        form = NewUserForm(data=request.POST)
         if form.is_valid():
             new_user = form.save()
             login(request, new_user)
