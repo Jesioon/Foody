@@ -11,7 +11,12 @@
       <h1>Ostatnio dodane</h1>
       <div class="recipes">
         {% for recipe in recipes_recent %}
-        <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+          <div class="darkHover">
+          <a href="#"></a><p>{{recipe.recipe_name}}</p>
+        </div>
+        </div>
+
         {% endfor %}
       </div>
     </section>
@@ -26,7 +31,11 @@
       <h1>Dania na szybko</h1>
       <div class="recipes">
         {% for recipe in recipes_quick %}
-        <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+          <div class="darkHover">
+          <a href="#"></a><p>{{recipe.recipe_name}}</p>
+        </div>
+        </div>
         {% endfor %}
       </div>
     </section>
@@ -38,7 +47,11 @@
         <h1>{{mealTime}}</h1>
         <div class="recipes">
         {% for recipe in recipes %}
-          <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+          <div class="darkHover">
+          <a href="#"></a><p>{{recipe.recipe_name}}</p>
+        </div>
+        </div>
         {% endfor %}
         </div>
         </section>
@@ -51,7 +64,11 @@
         <h1>Kuchnia {{country}}</h1>
         <div class="recipes">
           {% for recipe in recipes %}
-            <div class="recipe" style='background-image: url({{recipe.image.url}});'></div>
+          <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+            <div class="darkHover">
+            <a href="#"></a><p>{{recipe.recipe_name}}</p>
+          </div>
+          </div>
           {% endfor %}
         </div>
         </section>

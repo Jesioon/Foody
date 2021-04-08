@@ -61,11 +61,43 @@ main div.recipes {
 div.recipes div.recipe {
     flex-basis: 28%;
     height: 250px;
-    background-color: #000;
-    overflow: hidden;
     background-size: cover;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
+    position: relative;
+    transition: .3s;
+}
+
+div.recipe a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+div.recipe p {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 27px;
+    transition: .3s;
+}
+
+div.recipe:hover {
+    transform: scale(1.1);
+}
+div.recipe:hover .darkHover{
+    transition: .3s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+div.recipe:hover p{
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 main section.ads {
