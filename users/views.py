@@ -15,6 +15,9 @@ def register(request):
     context = {'form': form}
     return render(request, 'registration/register.html', context)
 
-def logout(request):
+def logout_request(request):
     logout(request)
     return redirect('foddys:index')
+
+def loginPage(request):
+    pass
