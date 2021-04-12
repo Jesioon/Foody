@@ -7,8 +7,10 @@
 <h1 class="recipesHeader">Kuchnia {{recipeType}}</h1>
 {% elif typeOf == 'mealTime' %}
 <h1 class="recipesHeader">{{recipeType}}</h1>
+{% elif typeOf == 'moje' %}
+<h1 class="recipesHeader">{{recipeType}} przepisy</h1>
 {% endif %}
-<main>
+
   <section class='recipesList'>
     {% for recipe in recipes %}
     <div style='background-image: url({{recipe.image.url}});'>
@@ -20,6 +22,6 @@
     <h2>Nie dodano jeszcze żadnego przepisu</h2>
     {% endfor %}
   </section>
-</main>
+
 </div>
 {% endblock content %}

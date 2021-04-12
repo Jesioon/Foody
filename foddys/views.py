@@ -47,7 +47,7 @@ def recipes(request, typeOf, recipeType):
 
     elif typeOf == 'moje' and recipeType == 'Moje':
         recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
-        context = {'recipes': recipes}
+        context = {'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
         return render(request, 'foddys/recipes.html', context)
     
     recipes = chosenItem.recipe_set.order_by('-likes')    

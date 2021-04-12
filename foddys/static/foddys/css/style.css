@@ -212,6 +212,8 @@ div.wrap {
   background-color: #000;
   color: #fff;
   position: relative;
+  top: 0;
+  left: 0;
 }
 
 .mainFooter h2 {
@@ -320,7 +322,7 @@ header.mainHeader a:hover {
 }
 
 main {
-  margin: 50px 0;
+  margin: 50px 0 100px;
 }
 
 main section {
@@ -482,8 +484,8 @@ div.ImageAndIngredients {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 28%;
-      flex-basis: 28%;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
   margin-right: 60px;
 }
 
@@ -511,12 +513,13 @@ div.wholeRecipe h2 {
 
 div.wholeRecipe p {
   font-size: 24px;
+  text-align: justify;
 }
 
 div.recipeIcons {
   width: 250px;
   height: 500px;
-  margin-right: 150px;
+  margin-right: 100px;
 }
 
 div.recipeIcons p {
@@ -531,17 +534,17 @@ div.recipeIcons p i {
 div.recipeIcons span {
   position: absolute;
   top: 40%;
-  left: 27%;
+  left: 35%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 div.recipeSteps {
   min-height: 300px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
   padding-left: 100px;
+  margin-right: 80px;
 }
 
 .wrap.testowanie {
