@@ -44,9 +44,9 @@ class Recipe(models.Model):
     MEDIUM = 'MM'
     HARD = 'HR'
     LEVEL = [
-        ('ES', 'Łatwe'),
-        ('MM', 'Średnie'),
-        ('HR', 'Trudne'),
+        (EASY, 'Łatwe'),
+        (MEDIUM, 'Średnie'),
+        (HARD, 'Trudne'),
     ]
     level = models.CharField(
         max_length=2,

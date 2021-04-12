@@ -2,13 +2,15 @@ h1.recipeTitle {
     color: #000;
     text-align: center;
     padding-top: 35px;
-    font-size: 48px;
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 div.wholeRecipe {
     display: flex;
     align-items: flex-start;
-    margin-top: 50px;
+    margin-top: 65px;
     max-width: 100%;
     padding: 0 50px;
 }
@@ -24,26 +26,54 @@ div.recipeImg {
     height: 400px; //tu będzie max-height
     width: 100%;
     margin-bottom: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div.recipeIngredients {
-    height: 500px;
+    min-height: 300px;
     width: 100%;
 }
 
 div.wholeRecipe h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     padding-bottom: 15px;
+    border-bottom: 5px solid black;
+    margin-bottom: 20px;
+}
+
+div.wholeRecipe p {
+    font-size: 24px;
 }
 
 div.recipeIcons {
     width: 250px;
     height: 500px;
-    margin-right: 50px;
+    margin-right: 150px;
+}
+
+div.recipeIcons p {
+    font-size: 26px;
+    position: relative;
+}
+
+div.recipeIcons p i {
+    font-size: 52px;
+}
+
+div.recipeIcons span {
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    transform: translateY(-50%);
 }
 
 div.recipeSteps {
     min-height: 300px;
     flex-grow: 1;
+    padding-left: 100px;
 }
+
+

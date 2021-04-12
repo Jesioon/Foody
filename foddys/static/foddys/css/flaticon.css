@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "flaticon";
-  src: url("./flaticon.ttf?aa2dbd035da0ef1822e60240d755a7d0") format("truetype"), url("./flaticon.woff?aa2dbd035da0ef1822e60240d755a7d0") format("woff"), url("./flaticon.woff2?aa2dbd035da0ef1822e60240d755a7d0") format("woff2"), url("./flaticon.eot?aa2dbd035da0ef1822e60240d755a7d0#iefix") format("embedded-opentype"), url("./flaticon.svg?aa2dbd035da0ef1822e60240d755a7d0#flaticon") format("svg");
+  src: url("./flaticon.ttf?f4a00f8a15f516689c440a43993cfab6") format("truetype"), url("./flaticon.woff?f4a00f8a15f516689c440a43993cfab6") format("woff"), url("./flaticon.woff2?f4a00f8a15f516689c440a43993cfab6") format("woff2"), url("./flaticon.eot?f4a00f8a15f516689c440a43993cfab6#iefix") format("embedded-opentype"), url("./flaticon.svg?f4a00f8a15f516689c440a43993cfab6#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -23,15 +23,31 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
   content: "";
 }
 
-.flaticon-linkedin:before {
+.flaticon-level:before {
   content: "";
 }
 
-.flaticon-telephone:before {
+.flaticon-like:before {
   content: "";
 }
 
-.flaticon-user:before {
+.flaticon-linkedin:before {
   content: "";
+}
+
+.flaticon-phone-call:before {
+  content: "";
+}
+
+.flaticon-time:before {
+  content: "";
+}
+
+.flaticon-user-1:before {
+  content: "";
+}
+
+.flaticon-user:before {
+  content: "";
 }
 /*# sourceMappingURL=flaticon.css.map */

@@ -12,7 +12,7 @@ urlpatterns = [
     # Pages with single type of recipes
     path('recipes/<str:typeOf>/<str:recipeType>/', views.recipes, name='recipes'),
     # Page with single recipe
-    path('recipe/', views.recipe, name='recipe'),
+    path('recipe/<int:recipe_id>/', views.recipe, name='recipe'),
     # Add new recipe as user
     path('new_recipe/', views.new_recipe, name='new_recipe'),
 ]

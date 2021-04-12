@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
-
 from .models import Recipe, Meal, WorldCuisine
 from .forms import RecipeForm
 
@@ -14,7 +13,6 @@ def recipeSort(amount_recipes, sortedList):
         if len(readyList) == amount_recipes:
             break
     return readyList
-
 
 def index(request):
     """Homepage"""
@@ -47,15 +45,28 @@ def recipes(request, typeOf, recipeType):
     elif typeOf == 'mealTime':
         chosenItem = Meal.objects.get(mealTime=recipeType)
 
+    elif typeOf == 'moje' and recipeType == 'Moje':
+        recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
+        context = {'recipes': recipes}
+        return render(request, 'foddys/recipes.html', context)
+    
     recipes = chosenItem.recipe_set.order_by('-likes')    
     context ={'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
-    print(recipes)
+
     return render(request, 'foddys/recipes.html', context)
 
-
-def recipe(request):
+def recipe(request, recipe_id):
     """Page with single recipe"""
-    return render(request, 'foddys/recipe.html')
+    recipe = Recipe.objects.get(id=recipe_id)
+    if recipe.level == 'ES':
+        recipeLevel = 'Łatwe'
+    elif recipe.level == 'MM':
+        recipeLevel = 'Średnie'
+    elif recipe.level == 'HR':
+        recipeLevel = 'Trudne'
+        
+    context = {'recipe': recipe, 'recipeLevel': recipeLevel}
+    return render(request, 'foddys/recipe.html', context)
 
 @login_required
 def new_recipe(request):

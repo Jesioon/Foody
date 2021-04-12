@@ -2,15 +2,23 @@
 
 {% block content %}
 <div class="wrap">
-<h1 class='recipeTitle'>Tytuł przepisu</h1>
+<h1 class='recipeTitle'>{{recipe.recipe_name.title}}</h1>
 
 <div class="wholeRecipe">
     <div class="ImageAndIngredients">
-        <div class='recipeImg'><img src="#" alt="Zdjęcie dania"></div>
-        <div class="recipeIngredients"><h2>Składniki:</h2><p></p></div>
+        <div class='recipeImg' style='background-image: url({{recipe.image.url}});'></div>
+        <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients}}</p></div>
     </div>
-    <div class="recipeIcons"></div>
-    <div class="recipeSteps"><h2>Krok po kroku</h2></div>
+    <div class="recipeIcons">
+        <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
+        <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
+        <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
+        <p><i class="flaticon-like"></i><span>{{recipe.likes}}</span></p>
+    </div>
+    <div class="recipeSteps">
+        <h2>Krok po kroku:</h2>
+        <p>{{recipe.recipe}}</p>
+    </div>
 </div>
 
 </div>

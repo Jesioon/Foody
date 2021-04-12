@@ -13,7 +13,7 @@
     {% for recipe in recipes %}
     <div style='background-image: url({{recipe.image.url}});'>
       <div class="darkHover">
-        <a href="#"><p>{{recipe.recipe_name}}</p></a>
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
       </div>
     </div>
     {% empty %}
