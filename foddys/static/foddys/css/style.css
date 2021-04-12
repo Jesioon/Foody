@@ -85,7 +85,6 @@ div.wrap {
   color: #fff;
   -webkit-transition: .3s;
   transition: .3s;
-  margin-right: 40px;
 }
 
 .left .recipeBtn.violet, .dropdownContent.violet {
@@ -163,6 +162,9 @@ div.wrap {
 
 .dropdown {
   position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 40px;
 }
 
 .dropdownContent {
@@ -325,8 +327,12 @@ main {
   margin: 50px 0 100px;
 }
 
-main section {
+section.threeRecipes {
   margin-top: 50px;
+}
+
+section.threeRecipes ~ .threeRecipes {
+  margin-top: 100px;
 }
 
 main h1 {

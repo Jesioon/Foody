@@ -57,7 +57,6 @@
     background-color: #00a9fc;
     color: #fff;
     transition: .3s;
-    margin-right: 40px;
 }
 
 .left .recipeBtn.violet, .dropdownContent.violet {
@@ -137,6 +136,9 @@
 
 .dropdown {
     position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 40px;
 }
 
 .dropdownContent {

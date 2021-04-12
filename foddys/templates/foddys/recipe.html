@@ -7,7 +7,7 @@
 <div class="wholeRecipe">
     <div class="ImageAndIngredients">
         <div class='recipeImg' style='background-image: url({{recipe.image.url}});'></div>
-        <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients}}</p></div>
+        <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients|linebreaks}}</p></div>
     </div>
     <div class="recipeIcons">
         <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
@@ -17,7 +17,7 @@
     </div>
     <div class="recipeSteps">
         <h2>Krok po kroku:</h2>
-        <p>{{recipe.recipe}}</p>
+        <p>{{recipe.recipe|linebreaks}}</p>
     </div>
 </div>
 

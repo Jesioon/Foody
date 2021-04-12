@@ -7,7 +7,7 @@
   </header>
 
     {% if recipes_recent %}
-    <section>
+    <section class='threeRecipes'>
       <h1>Ostatnio dodane</h1>
       <div class="recipes">
         {% for recipe in recipes_recent %}
@@ -27,7 +27,7 @@
     </section> -->
 
     {% if recipes_quick %}
-    <section>
+    <section class='threeRecipes'>
       <h1>Dania na szybko</h1>
       <div class="recipes">
         {% for recipe in recipes_quick %}
@@ -43,7 +43,7 @@
   
     {% for mealTime, recipes in meals_context.items %}
       {% if recipes %}
-        <section>
+        <section class='threeRecipes'>
         <h1>{{mealTime}}</h1>
         <div class="recipes">
         {% for recipe in recipes %}
@@ -60,7 +60,7 @@
 
     {% for country, recipes in countries_context.items %}
       {% if recipes %}
-        <section>
+        <section class='threeRecipes'>
         <h1>Kuchnia {{country}}</h1>
         <div class="recipes">
           {% for recipe in recipes %}
