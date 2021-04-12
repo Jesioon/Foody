@@ -3,9 +3,23 @@
 {% block content %}
 <div class="wrap">
 <header class="recipesPage"></header>
-<h1 class="recipesHeader">Przepisy na coś</h1>
+{% if typeOf == 'country' %}
+<h1 class="recipesHeader">Kuchnia {{recipeType}}</h1>
+{% elif typeOf == 'mealTime' %}
+<h1 class="recipesHeader">{{recipeType}}</h1>
+{% endif %}
 <main>
-<section class="recipesList"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></section>
+  <section class='recipesList'>
+    {% for recipe in recipes %}
+    <div style='background-image: url({{recipe.image.url}});'>
+      <div class="darkHover">
+        <a href="#"><p>{{recipe.recipe_name}}</p></a>
+      </div>
+    </div>
+    {% empty %}
+    <h2>Nie dodano jeszcze żadnego przepisu</h2>
+    {% endfor %}
+  </section>
 </main>
 </div>
 {% endblock content %}

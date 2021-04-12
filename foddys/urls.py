@@ -9,8 +9,8 @@ app_name = 'foddys'
 urlpatterns = [
     # Homepage
     path('', views.index, name='index'),
-    # Page with recipes lists
-    path('recipes/', views.recipes, name='recipes'),
+    # Pages with single type of recipes
+    path('recipes/<str:typeOf>/<str:recipeType>/', views.recipes, name='recipes'),
     # Page with single recipe
     path('recipe/', views.recipe, name='recipe'),
     # Add new recipe as user

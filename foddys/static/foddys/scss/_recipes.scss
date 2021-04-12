@@ -18,7 +18,7 @@ header.recipesPage {
 }
 
 
-
+// More CSS to this website is in _homepage.scss
 section.recipesList {
     margin-top: 10vh;
     display: flex;
@@ -28,8 +28,13 @@ section.recipesList {
 }
 
 .recipesList div {
-    background-color: #000;
     flex-basis: 23%;
     height: 280px;
     margin-bottom: 50px;
+    background-size: cover;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: .3s;
 }
+

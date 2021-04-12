@@ -5,7 +5,7 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = '__all__'
-        exclude =['owner']
+        exclude =['owner', 'likes']
         labels = {
             'recipe_name': 'Nazwa przepisu',
             'time_need': 'Potrzebny czas (min)',

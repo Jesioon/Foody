@@ -208,6 +208,7 @@ div.wrap {
 }
 
 .mainFooter {
+  margin-top: 150px;
   height: 180px;
   background-color: #000;
   color: #fff;
@@ -355,14 +356,14 @@ div.recipes div.recipe {
   transition: .3s;
 }
 
-div.recipe a {
+div.recipe a, .recipesList a {
   text-decoration: none;
   display: block;
   height: 100%;
   width: 100%;
 }
 
-div.recipe p {
+div.recipe p, .recipesList p {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -371,26 +372,26 @@ div.recipe p {
   font-size: 27px;
   -webkit-transition: .3s;
   transition: .3s;
+  cursor: pointer;
 }
 
-div.recipe:hover {
+div.recipe:hover, .recipesList > div:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-div.recipe:hover .darkHover {
+div.recipe:hover .darkHover,
+.recipesList div:hover .darkHover {
   -webkit-transition: .3s;
   transition: .3s;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-div.recipe:hover p {
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #fff;
+div.recipe:hover p,
+.recipesList div:hover p {
+  text-decoration: underline;
 }
 
 main section.ads {
@@ -441,11 +442,16 @@ section.recipesList {
 }
 
 .recipesList div {
-  background-color: #000;
   -ms-flex-preferred-size: 23%;
       flex-basis: 23%;
   height: 280px;
   margin-bottom: 50px;
+  background-size: cover;
+  background-position: 50%, 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 h1.recipeTitle {

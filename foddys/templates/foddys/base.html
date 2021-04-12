@@ -24,22 +24,22 @@
         <a href="{% url 'foddys:index' %}" class='logo'>Foody</a>
         <div class="dropdown">
           <div class="dropdownContent blue">
-            <a href="{% url 'foddys:recipes' %}">Kuchnia polska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia włoska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia amerykańska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia chińska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia tajska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia azjatycka</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia indyjska</a>
-            <a href="{% url 'foddys:recipes' %}">Kuchnia francuska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Polska' %}">Kuchnia polska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Włoska' %}">Kuchnia włoska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Amerykańska' %}">Kuchnia amerykańska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Chińska' %}">Kuchnia chińska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Tajska' %}">Kuchnia tajska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Azjatycka' %}">Kuchnia azjatycka</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Indyjska' %}">Kuchnia indyjska</a>
+            <a href="{% url 'foddys:recipes' typeOf='country' recipeType='Francuska' %}">Kuchnia francuska</a>
           </div>
           <span class="recipeBtn blue">Przepisy</span>
         </div>
         <div class="dropdown">
           <div class="dropdownContent violet">
-            <a href="{% url 'foddys:recipes' %}">Śniadanie</a>
-            <a href="{% url 'foddys:recipes' %}">Obiad</a>
-            <a href="{% url 'foddys:recipes' %}">Kolacja</a>
+            <a href="{% url 'foddys:recipes' typeOf='mealTime' recipeType='Śniadanie' %}">Śniadanie</a>
+            <a href="{% url 'foddys:recipes' typeOf='mealTime' recipeType='Obiad' %}">Obiad</a>
+            <a href="{% url 'foddys:recipes' typeOf='mealTime' recipeType='Kolacja' %}">Kolacja</a>
           </div>
           <span class="recipeBtn violet">Pora dnia</span>
         </div>
@@ -49,7 +49,7 @@
       <div class="dropdown">
         <div class="dropdownContent logOut">
           <a href="{% url 'foddys:new_recipe' %}">Dodaj przepis</a>
-          <a href="{% url 'foddys:recipes' %}">Moje przepisy</a>
+          <a href="{% url 'foddys:recipes' typeOf='moje' recipeType='Moje' %}">Moje przepisy</a>
           <a href="{% url 'users:logout' %}">Wyloguj się</a>
         </div>
       <span class="recipeBtn logOut"><i class="flaticon-user"></i></span>

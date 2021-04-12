@@ -28,12 +28,14 @@ class Recipe(models.Model):
     portions = models.IntegerField(
         validators=[MinValueValidator(1)], default=1)
 
+    likes = models.IntegerField(validators=[MinValueValidator(0)], default=0)
+
     DEFAULT_KEY = 0
     day_key = models.ForeignKey(
         Meal, on_delete=models.CASCADE, default=DEFAULT_KEY)
     country_key = models.ForeignKey(
         WorldCuisine, on_delete=models.CASCADE, default=DEFAULT_KEY)
-    
+
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     image = models.ImageField(blank=True, default='defaultRecipex640.jpg')
@@ -54,8 +56,6 @@ class Recipe(models.Model):
 
     ingredients = models.TextField(max_length=400)
     recipe = models.TextField(max_length=1000)
-
-    likes = 0
 
     def __str__(self):
         return self.recipe_name

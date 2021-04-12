@@ -40,9 +40,18 @@ def index(request):
     print(meals_context)
     return render(request, 'foddys/index.html', context)
 
-def recipes(request):
-    """Page with recipes lists"""
-    return render(request, 'foddys/recipes.html')
+def recipes(request, typeOf, recipeType):
+    if typeOf == 'country':
+        chosenItem = WorldCuisine.objects.get(country=recipeType)
+
+    elif typeOf == 'mealTime':
+        chosenItem = Meal.objects.get(mealTime=recipeType)
+
+    recipes = chosenItem.recipe_set.order_by('-likes')    
+    context ={'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
+    print(recipes)
+    return render(request, 'foddys/recipes.html', context)
+
 
 def recipe(request):
     """Page with single recipe"""
