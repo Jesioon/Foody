@@ -7,8 +7,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
     width: 100%;
+
+// This is for footer stick to bottom of all pages
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 div.wrap {

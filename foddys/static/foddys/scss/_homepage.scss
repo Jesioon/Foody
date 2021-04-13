@@ -37,9 +37,9 @@ header.mainHeader a:hover {
     font-size: 45px;
 }
 
-main {
-    margin: 50px 0 100px;
-}
+// main {
+//     margin: 50px 0 100px;
+// }
 
 section.threeRecipes {
     margin-top: 50px;
@@ -47,6 +47,10 @@ section.threeRecipes {
 
 section.threeRecipes~.threeRecipes {
     margin-top: 100px;
+}
+
+section.threeRecipes:last-of-type {
+    margin-bottom: 150px;
 }
 
 main h1 {

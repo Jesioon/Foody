@@ -7,8 +7,16 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
 }
 
 div.wrap {
@@ -216,6 +224,7 @@ div.wrap {
   position: relative;
   top: 0;
   left: 0;
+  margin-top: auto;
 }
 
 .mainFooter h2 {
@@ -323,16 +332,16 @@ header.mainHeader a:hover {
   font-size: 45px;
 }
 
-main {
-  margin: 50px 0 100px;
-}
-
 section.threeRecipes {
   margin-top: 50px;
 }
 
 section.threeRecipes ~ .threeRecipes {
   margin-top: 100px;
+}
+
+section.threeRecipes:last-of-type {
+  margin-bottom: 150px;
 }
 
 main h1 {
@@ -446,6 +455,7 @@ section.recipesList {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 
 .recipesList div {
