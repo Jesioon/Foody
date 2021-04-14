@@ -48,6 +48,7 @@ def recipes(request, typeOf, recipeType):
     try:
         recipes = chosenItem.recipe_set.order_by('-likes')    
     except UnboundLocalError:
+        return redirect('foddys:index')
         print('Nie ma chosenItem')
 
     context ={'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
@@ -65,7 +66,12 @@ def recipe(request, recipe_id):
     elif recipe.level == 'HR':
         recipeLevel = 'Trudne'
         
-    context = {'recipe': recipe, 'recipeLevel': recipeLevel}
+    recipeOwner = False
+
+    if recipe.owner == request.user:
+        recipeOwner = True
+
+    context = {'recipe': recipe, 'recipeLevel': recipeLevel, 'recipeOwner': recipeOwner}
     return render(request, 'foddys/recipe.html', context)
 
 @login_required
@@ -89,3 +95,20 @@ def my_recipes(request):
     recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
     context = {'recipes': recipes}
     return render(request, 'foddys/my_recipes.html', context)
+
+@login_required
+def edit_recipe(request, recipe_id):
+    recipe = Recipe.objects.get(id=recipe_id)
+    if recipe.owner != request.user:
+        raise Http404
+
+    if request.method != 'POST':
+        form = RecipeForm(instance=recipe)
+    else:
+        form = RecipeForm(instance=recipe, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('foddys:my_recipes')
+
+    context = {'recipe': recipe, 'form': form}
+    return render(request, 'foddys/edit_recipe.html', context)

@@ -585,6 +585,15 @@ div.recipeIcons p i {
   font-size: 52px;
 }
 
+div.recipeIcons button {
+  margin-right: 10px;
+}
+
+div.recipeIcons button a {
+  color: #fff;
+  text-decoration: none;
+}
+
 div.recipeIcons span {
   position: absolute;
   top: 40%;

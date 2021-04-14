@@ -1,0 +1,18 @@
+{% extends 'foddys/base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="wrap testowanie">
+    <div class="ciemno">
+    <h1 class='loginRegister'>Edytuj przepis:</h1>
+    
+    <form enctype="multipart/form-data" action="{% url 'foddys:edit_recipe' recipe.id %}" class='loginRegisterForm'  method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <button name='submit' class='btn btn-primary'>Dodaj przepis</button>
+        {% endbuttons %}
+    </form>
+    </div>
+    </div>
+{% endblock content %}

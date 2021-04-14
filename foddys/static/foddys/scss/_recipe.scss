@@ -64,6 +64,15 @@ div.recipeIcons p i {
     font-size: 52px;
 }
 
+div.recipeIcons button {
+    margin-right: 10px;
+}
+
+div.recipeIcons button a {
+    color: #fff;
+    text-decoration: none;
+}
+
 div.recipeIcons span {
     position: absolute;
     top: 40%;
@@ -78,3 +87,26 @@ div.recipeSteps {
 }
 
 
+// section.modal-wrap.active {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 400vh;
+    
+//     // background-color: rgba(0,0,0,.5);
+// }
+
+// .modaler {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 400px;
+//     height: 300px;
+//     background-color: #000;
+//     z-index: 3;
+// }
+// main {
+//     filter: blur(2px);
+// }
