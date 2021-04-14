@@ -37,10 +37,6 @@ header.mainHeader a:hover {
     font-size: 45px;
 }
 
-// main {
-//     margin: 50px 0 100px;
-// }
-
 section.threeRecipes {
     margin-top: 50px;
 }
@@ -72,6 +68,7 @@ div.recipes div.recipe {
     background-size: cover;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     transition: .3s;
 }
@@ -91,6 +88,9 @@ div.recipe p, .recipesList p {
     font-size: 27px;
     transition: .3s;
     cursor: pointer;
+    width: 105%;
+    word-wrap: break-word; // do sprawdzenia ta komenda
+    text-align: center;
 }
 
 div.recipe:hover, .recipesList>div:hover {

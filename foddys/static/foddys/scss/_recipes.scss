@@ -20,21 +20,22 @@ header.recipesPage {
 
 // More CSS to this website is in _homepage.scss
 section.recipesList {
-    margin-top: 10vh;
-    margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 100px;
+    width: 95%;
+    margin: 10vh auto 40px auto;
 }
 
 .recipesList div {
     flex-basis: 23%;
     height: 280px;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
     background-size: cover;
     background-position: 50%, 50%;
     background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     transition: .3s;
 }

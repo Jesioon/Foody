@@ -10,30 +10,8 @@ h1.recipeTitle {
 div.wholeRecipe {
     display: flex;
     align-items: flex-start;
-    margin-top: 65px;
-    max-width: 100%;
-    padding: 0 50px;
-}
-
-div.ImageAndIngredients {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 32%;
-    margin-right: 60px;
-}
-
-div.recipeImg {
-    height: 400px; //tu będzie max-height
-    width: 100%;
-    margin-bottom: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-div.recipeIngredients {
-    min-height: 300px;
-    width: 100%;
+    margin: 65px auto 0 auto;
+    width: 95%;
 }
 
 div.wholeRecipe h2 {
@@ -49,10 +27,32 @@ div.wholeRecipe p {
     text-align: justify;
 }
 
+div.ImageAndIngredients {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.recipeImg {
+    flex-basis: 400px;
+    width: 100%;
+    margin-bottom: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-position: 50%, 50%;
+}
+
+div.recipeIngredients {
+    min-height: 300px;
+    width: 100%;
+}
+
 div.recipeIcons {
-    width: 250px;
+    flex-basis: 15%;
     height: 500px;
-    margin-right: 100px;
+    padding-left: 50px;
 }
 
 div.recipeIcons p {
@@ -73,9 +73,8 @@ div.recipeIcons span {
 
 div.recipeSteps {
     min-height: 300px;
-    flex-basis: 60%;
+    flex-basis: 45%;
     padding-left: 100px;
-    margin-right: 80px;
 }
 
 
