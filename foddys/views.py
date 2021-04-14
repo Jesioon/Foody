@@ -71,12 +71,7 @@ def recipe(request, recipe_id):
     if recipe.owner == request.user:
         recipeOwner = True
 
-    dataDictonary = {
-        'id': recipe_id
-    }
-    dataJSON = dumps(dataDictonary)
-
-    context = {'recipe': recipe, 'recipeLevel': recipeLevel, 'recipeOwner': recipeOwner, 'dataJSON': dataJSON}
+    context = {'recipe': recipe, 'recipeLevel': recipeLevel, 'recipeOwner': recipeOwner}
     return render(request, 'foddys/recipe.html', context)
 
 @login_required
