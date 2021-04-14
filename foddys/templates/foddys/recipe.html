@@ -16,9 +16,7 @@
         <p><i class="flaticon-like"></i><span>{{recipe.likes}}</span></p>
         {% if recipeOwner %}
         <button type='button' class='btn btn-primary'><a href="{% url 'foddys:edit_recipe' recipe.id %}">Edytuj</a></button>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-            Usuń
-          </button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Usuń</button>
         {% endif %}
     </div>
     <div class="recipeSteps">
@@ -43,7 +41,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-          <button type="button" class="btn btn-danger" id='deleteButton'>Usuń</button>
+          <button type="button" class="btn btn-danger" id='deleteButton'><a href="{% url 'foddys:delete_recipe' recipe.id %}">Usuń</a> 
+        </button>
         </div>
       </div>
     </div>

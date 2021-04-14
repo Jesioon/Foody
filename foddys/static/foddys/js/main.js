@@ -22,23 +22,6 @@ class ShortcutButton {
     }
 }
 
-class deleteRecipe {
-    constructor() {
-        this.button = document.getElementById('deleteButton');
-
-        
-        this.button.addEventListener('click', this.deleteAccept)
-    }
-
-    deleteAccept() {
-        window.location.replace('/my_recipes/')
-        console.log('siema')
-    }
-}
-if(window.location.pathname === '/recipe/'){
-const siema = new deleteRecipe()
-}
-
 if(window.location.pathname === '/'){
     button = new ShortcutButton();
 }

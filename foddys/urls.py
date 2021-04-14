@@ -18,5 +18,7 @@ urlpatterns = [
     # Page with user recipes
     path('my_recipes/', views.my_recipes, name='my_recipes'),
     # Page where user can edit his recipes
-    path('edit_recipe/<int:recipe_id>/', views.edit_recipe, name='edit_recipe',)
+    path('edit_recipe/<int:recipe_id>/', views.edit_recipe, name='edit_recipe'),
+    # Delete recipe 
+    path('delete_recipe/<int:recipe_id>/', views.delete_recipe, name='delete_recipe'),
 ]

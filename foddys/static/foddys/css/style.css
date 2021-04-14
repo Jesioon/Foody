@@ -585,13 +585,20 @@ div.recipeIcons p i {
   font-size: 52px;
 }
 
-div.recipeIcons button {
+div.recipeIcons button:first-of-type,
+div.modal-footer button:last-of-type {
   margin-right: 10px;
+  padding: 0;
 }
 
-div.recipeIcons button a {
+div.recipeIcons button a,
+div.modal-footer button a {
   color: #fff;
   text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: .375rem .75rem;
 }
 
 div.recipeIcons span {

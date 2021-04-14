@@ -71,7 +71,12 @@ def recipe(request, recipe_id):
     if recipe.owner == request.user:
         recipeOwner = True
 
-    context = {'recipe': recipe, 'recipeLevel': recipeLevel, 'recipeOwner': recipeOwner}
+    dataDictonary = {
+        'id': recipe_id
+    }
+    dataJSON = dumps(dataDictonary)
+
+    context = {'recipe': recipe, 'recipeLevel': recipeLevel, 'recipeOwner': recipeOwner, 'dataJSON': dataJSON}
     return render(request, 'foddys/recipe.html', context)
 
 @login_required
@@ -112,3 +117,9 @@ def edit_recipe(request, recipe_id):
 
     context = {'recipe': recipe, 'form': form}
     return render(request, 'foddys/edit_recipe.html', context)
+
+@login_required
+def delete_recipe(request, recipe_id):
+    recipe = Recipe.objects.get(id=recipe_id)
+    recipe.delete()
+    return redirect('foddys:my_recipes')
