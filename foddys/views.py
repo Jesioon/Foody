@@ -34,11 +34,6 @@ def recipes(request, typeOf, recipeType):
     elif typeOf == 'mealTime':
         chosenItem = Meal.objects.get(mealTime=recipeType)
 
-    elif typeOf == 'moje' and recipeType == 'Moje':
-        recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
-        context = {'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
-        return render(request, 'foddys/recipes.html', context)
-
     elif typeOf == 'search' and recipeType == 'Search':
         search_value = request.POST['name'].lower()
         recipes = Recipe.objects.all()
@@ -48,7 +43,7 @@ def recipes(request, typeOf, recipeType):
                 chosenItem.append(recipe)
           
         context = {'recipes': chosenItem, 'typeOf': typeOf, 'recipeType': recipeType}
-        return render (request, 'foddys/recipes.html', context)
+        return render(request, 'foddys/recipes.html', context)
 
     try:
         recipes = chosenItem.recipe_set.order_by('-likes')    
@@ -88,3 +83,9 @@ def new_recipe(request):
 
     context = {'form': form}
     return render(request, 'foddys/new_recipe.html', context)
+
+@login_required
+def my_recipes(request):
+    recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
+    context = {'recipes': recipes}
+    return render(request, 'foddys/my_recipes.html', context)

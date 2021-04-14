@@ -15,4 +15,6 @@ urlpatterns = [
     path('recipe/<int:recipe_id>/', views.recipe, name='recipe'),
     # Add new recipe as user
     path('new_recipe/', views.new_recipe, name='new_recipe'),
+
+    path('my_recipes/', views.my_recipes, name='my_recipes'),
 ]

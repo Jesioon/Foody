@@ -3,13 +3,8 @@
 {% block content %}
 <div class="wrap">
 <header class="recipesPage"></header>
-{% if typeOf == 'country' %}
-<h1 class="recipesHeader">Kuchnia {{recipeType}}</h1>
-{% elif typeOf == 'mealTime' %}
-<h1 class="recipesHeader">{{recipeType}}</h1>
-{% elif typeOf == 'search' %}
-<h1 class="recipesHeader">Znalezione przepisy</h1>
-{% endif %}
+<h1 class="recipesHeader">Moje przepisy</h1>
+
 
   <section class='recipesList'>
     {% for recipe in recipes %}
