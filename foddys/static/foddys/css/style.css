@@ -217,6 +217,36 @@ div.wrap {
   font-size: 22px;
 }
 
+.mainNav form {
+  margin-right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#form1 {
+  width: 250px;
+  margin-right: 15px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-width: 2px;
+}
+
+#buttonSubmit {
+  border: none;
+  background-color: #fff;
+  margin-right: 90px;
+  font-size: 25px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .mainFooter {
   height: 180px;
   background-color: #000;
@@ -314,7 +344,7 @@ header.mainHeader h1 {
 
 header.mainHeader a {
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -448,6 +478,7 @@ header.recipesPage {
 
 section.recipesList {
   margin-top: 10vh;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +493,7 @@ section.recipesList {
   -ms-flex-preferred-size: 23%;
       flex-basis: 23%;
   height: 280px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   background-size: cover;
   background-position: 50%, 50%;
   background-repeat: no-repeat;

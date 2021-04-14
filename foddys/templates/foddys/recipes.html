@@ -9,13 +9,15 @@
 <h1 class="recipesHeader">{{recipeType}}</h1>
 {% elif typeOf == 'moje' %}
 <h1 class="recipesHeader">{{recipeType}} przepisy</h1>
+{% elif typeOf == 'search' %}
+<h1 class="recipesHeader">Znalezione przepisy</h1>
 {% endif %}
 
   <section class='recipesList'>
     {% for recipe in recipes %}
-    <div style='background-image: url({{recipe.image.url}});'>
+    <div class='recipeItem' style='background-image: url({{recipe.image.url}});'>
       <div class="darkHover">
-        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name.title}}</p></a>
       </div>
     </div>
     {% empty %}

@@ -45,6 +45,13 @@
         </div>
     </div>
     <div class="right">
+      <!-- <input id="search" type="text" placeholder="Szukaj..."> -->
+      <form action="{% url 'foddys:recipes' typeOf='search' recipeType='Search' %}" method="POST">
+        {% csrf_token %}
+        <input type="search" name='name' id="form1" class="form-control" placeholder="Szukaj przepisu..."
+      aria-label="Search" />
+      <button id='buttonSubmit' type='submit'><i class="flaticon-loupe"></i></button>
+    </form>
       {% if user.is_authenticated %}
       <div class="dropdown">
         <div class="dropdownContent logOut">

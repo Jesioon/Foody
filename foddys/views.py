@@ -25,7 +25,6 @@ def index(request):
 
     context = {'recipes_recent': recipes_recent, 'recipes_quick': recipes_quick, 'meals_context': meals_context, 'countries_context': countries_context}
 
-    print(meals_context)
     return render(request, 'foddys/index.html', context)
 
 def recipes(request, typeOf, recipeType):
@@ -39,8 +38,23 @@ def recipes(request, typeOf, recipeType):
         recipes = Recipe.objects.filter(owner=request.user).order_by('-publication_date')
         context = {'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
         return render(request, 'foddys/recipes.html', context)
-    
-    recipes = chosenItem.recipe_set.order_by('-likes')    
+
+    elif typeOf == 'search' and recipeType == 'Search':
+        search_value = request.POST['name'].lower()
+        recipes = Recipe.objects.all()
+        chosenItem = []
+        for recipe in recipes: 
+            if recipe.recipe_name.lower().count(search_value) > 0:
+                chosenItem.append(recipe)
+          
+        context = {'recipes': chosenItem, 'typeOf': typeOf, 'recipeType': recipeType}
+        return render (request, 'foddys/recipes.html', context)
+
+    try:
+        recipes = chosenItem.recipe_set.order_by('-likes')    
+    except UnboundLocalError:
+        print('Nie ma chosenItem')
+
     context ={'recipes': recipes, 'typeOf': typeOf, 'recipeType': recipeType}
 
     return render(request, 'foddys/recipes.html', context)

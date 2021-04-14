@@ -2,11 +2,11 @@ $flaticon-font: "flaticon";
 
 @font-face {
     font-family: $flaticon-font;
-    src: url("./flaticon.ttf?f4a00f8a15f516689c440a43993cfab6") format("truetype"),
-url("./flaticon.woff?f4a00f8a15f516689c440a43993cfab6") format("woff"),
-url("./flaticon.woff2?f4a00f8a15f516689c440a43993cfab6") format("woff2"),
-url("./flaticon.eot?f4a00f8a15f516689c440a43993cfab6#iefix") format("embedded-opentype"),
-url("./flaticon.svg?f4a00f8a15f516689c440a43993cfab6#flaticon") format("svg");
+    src: url("./flaticon.ttf?28dab2f516273353ee9674a0f8729bf6") format("truetype"),
+url("./flaticon.woff?28dab2f516273353ee9674a0f8729bf6") format("woff"),
+url("./flaticon.woff2?28dab2f516273353ee9674a0f8729bf6") format("woff2"),
+url("./flaticon.eot?28dab2f516273353ee9674a0f8729bf6#iefix") format("embedded-opentype"),
+url("./flaticon.svg?28dab2f516273353ee9674a0f8729bf6#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -26,10 +26,11 @@ $flaticon-map: (
     "level": "\f103",
     "like": "\f104",
     "linkedin": "\f105",
-    "phone-call": "\f106",
-    "time": "\f107",
-    "user-1": "\f108",
-    "user": "\f109",
+    "loupe": "\f106",
+    "phone-call": "\f107",
+    "time": "\f108",
+    "user-1": "\f109",
+    "user": "\f10a",
 );
 
 .flaticon-github:before {
@@ -46,6 +47,9 @@ $flaticon-map: (
 }
 .flaticon-linkedin:before {
     content: map-get($flaticon-map, "linkedin");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon-map, "loupe");
 }
 .flaticon-phone-call:before {
     content: map-get($flaticon-map, "phone-call");

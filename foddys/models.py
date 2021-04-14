@@ -55,7 +55,7 @@ class Recipe(models.Model):
     )
 
     ingredients = models.TextField(max_length=400)
-    recipe = models.TextField(max_length=1000)
+    recipe = models.TextField(max_length=1500)
 
     def __str__(self):
         return self.recipe_name
