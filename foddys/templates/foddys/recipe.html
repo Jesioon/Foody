@@ -13,7 +13,6 @@
         <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
         <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
         <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
-        <p><i class="flaticon-like"></i><span>{{recipe.likes}}</span></p>
         {% if recipeOwner %}
         <button type='button' class='btn btn-primary'><a href="{% url 'foddys:edit_recipe' recipe.id %}">Edytuj</a></button>
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Usuń</button>

@@ -28,8 +28,6 @@ class Recipe(models.Model):
     portions = models.IntegerField(
         validators=[MinValueValidator(1)], default=1)
 
-    likes = models.IntegerField(validators=[MinValueValidator(0)], default=0)
-
     DEFAULT_KEY = 0
     day_key = models.ForeignKey(
         Meal, on_delete=models.CASCADE, default=DEFAULT_KEY)
