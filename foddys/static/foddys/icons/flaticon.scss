@@ -2,11 +2,11 @@ $flaticon-font: "flaticon";
 
 @font-face {
     font-family: $flaticon-font;
-    src: url("./flaticon.ttf?28dab2f516273353ee9674a0f8729bf6") format("truetype"),
-url("./flaticon.woff?28dab2f516273353ee9674a0f8729bf6") format("woff"),
-url("./flaticon.woff2?28dab2f516273353ee9674a0f8729bf6") format("woff2"),
-url("./flaticon.eot?28dab2f516273353ee9674a0f8729bf6#iefix") format("embedded-opentype"),
-url("./flaticon.svg?28dab2f516273353ee9674a0f8729bf6#flaticon") format("svg");
+    src: url("./flaticon.ttf?034608b600480385d4f4798c43d096bc") format("truetype"),
+url("./flaticon.woff?034608b600480385d4f4798c43d096bc") format("woff"),
+url("./flaticon.woff2?034608b600480385d4f4798c43d096bc") format("woff2"),
+url("./flaticon.eot?034608b600480385d4f4798c43d096bc#iefix") format("embedded-opentype"),
+url("./flaticon.svg?034608b600480385d4f4798c43d096bc#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -23,14 +23,15 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 $flaticon-map: (
     "github": "\f101",
     "gmail": "\f102",
-    "level": "\f103",
-    "like": "\f104",
-    "linkedin": "\f105",
-    "loupe": "\f106",
-    "phone-call": "\f107",
-    "time": "\f108",
-    "user-1": "\f109",
-    "user": "\f10a",
+    "hamburger": "\f103",
+    "level": "\f104",
+    "like": "\f105",
+    "linkedin": "\f106",
+    "loupe": "\f107",
+    "phone-call": "\f108",
+    "time": "\f109",
+    "user-1": "\f10a",
+    "user": "\f10b",
 );
 
 .flaticon-github:before {
@@ -38,6 +39,9 @@ $flaticon-map: (
 }
 .flaticon-gmail:before {
     content: map-get($flaticon-map, "gmail");
+}
+.flaticon-hamburger:before {
+    content: map-get($flaticon-map, "hamburger");
 }
 .flaticon-level:before {
     content: map-get($flaticon-map, "level");

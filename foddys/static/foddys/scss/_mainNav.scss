@@ -53,13 +53,15 @@
     letter-spacing: 3px;
 }
 
-.left .recipeBtn, .dropdownContent {
+.left .recipeBtn,
+.dropdownContent {
     background-color: #00a9fc;
     color: #fff;
     transition: .3s;
 }
 
-.left .recipeBtn.violet, .dropdownContent.violet {
+.left .recipeBtn.violet,
+.dropdownContent.violet {
     background-color: #6c6ca7;
 }
 
@@ -97,9 +99,11 @@
     background-color: #fff;
 }
 
+.right .dropdown {
+    margin-right: 40px;
+}
+
 .right .recipeBtn.logOut {
-    margin-right: 80px;
-    // background-color: black;
     position: relative;
     height: 100%;
     padding: 0 50px;
@@ -116,23 +120,28 @@
     // transition: .2s;
 }
 
-.dropdownContent.logOut {
+.dropdownContent.logOut, .dropdownContent.burgerMenu {
     background-color: #ff3800;
     left: -150px;
     top: 100%;
     width: 250px;
 }
 
+.dropdownContent.burgerMenu {
+    left: -180px;
+}
+
 .right .recipeBtn:hover,
-.dropdownContent:hover+.recipeBtn.logOut {
+.dropdownContent:hover+.recipeBtn.logOut,
+.dropdownContent:hover+.recipeBtn.burger {
     background-color: #ff3800;
-    
 }
 
 .right .recipeBtn:hover i,
-.dropdownContent:hover+.recipeBtn.logOut i {
+.dropdownContent:hover+.recipeBtn.logOut i,
+.dropdownContent:hover+.recipeBtn.burger i {
     color: white;
-}
+} 
 
 .dropdown {
     position: relative;
@@ -153,8 +162,9 @@
     // transition: .3s;
 }
 
-.dropdownContent.logOut {
-    transform-origin: 100% 0;;
+.dropdownContent.logOut, .dropdownContent.burgerMenu {
+    transform-origin: 100% 0;
+    ;
 }
 
 .dropdownContent a {
@@ -180,6 +190,7 @@
     margin-right: 25px;
     display: flex;
 }
+
 #form1 {
     width: 250px;
     margin-right: 15px;
@@ -200,4 +211,190 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+}
+
+.right .recipeBtn.burger {
+    position: relative;
+    display: none;
+    height: 100%;
+    padding: 0 35px;
+
+}
+
+.right .dropdownContent.burgerMenu {
+    display: none;
+}
+
+.right .recipeBtn.burger i {
+    font-size: 32px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+
+#burgerDiv.active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+// RWD START
+
+
+@media(max-width: 1680px) {
+    .left .logo {
+        margin: 0 40px 0 10px;
+    }
+
+    .right .dropdown {
+        margin-right: 15px;
+    }
+
+    .right .signUp {
+        margin-right: 15px;
+    }
+
+    .right .signIn {
+        margin-right: 10px;
+    }
+
+    #form1 {
+        margin-right: 10px;
+        width: 200px;
+    }
+
+    #buttonSubmit {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 1430px) {
+
+    .mainNav a,
+    .mainNav .recipeBtn {
+        font-size: 20px;
+        line-height: 65px;
+    }
+
+    .recipeBtn,
+    .signIn,
+    .signUp,
+    .logo {
+        padding: 0 20px;
+    }
+
+    .left .logo {
+        margin: 0 30px 0 10px;
+        font-size: 40px;
+    }
+
+    .left .logo:hover {
+        font-size: 45px;
+    }
+
+    .dropdownContent a {
+        line-height: 55px;
+    }
+
+}
+
+@media(max-width: 1100px) {
+
+    .mainNav .left .dropdown,
+    .mainNav .right span.logOut,
+    .mainNav .right .signUp,
+    .mainNav .right .signIn,
+    .right .dropdownContent
+     {
+        display: none;
+    }
+
+    .left .logo {
+        font-size: 45px;
+    }
+
+    .left .logo:hover {
+        font-size: 50px;
+    }
+
+    #form1 {
+        width: 250px;
+    }
+
+    .right .recipeBtn.burger {
+        display: block;
+    } 
+
+    .right .dropdownContent.burgerMenu {
+        display: flex;
+    }
+}
+
+@media(max-width: 750px) {
+    .left .logo {
+        font-size: 35px;
+    }
+
+    .left .logo:hover {
+        font-size: 40px;
+    }
+
+    .mainNav form {
+        margin: 0;
+    }
+
+    #form1 {
+        width: 200px;
+    }
+
+    .dropdown {
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 565px) {
+    .left .logo {
+        margin: 0 10px 0 20px;
+        padding: 0 10px 0 0;
+    }
+
+    .left .logo:hover {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    // .mainNav form {
+    //     margin-right: 35px;
+    // }
+
+    #form1 {
+        width: 76px;
+    }
+
+    #buttonSubmit {
+        font-size: 21px;
+        margin: 0;
+    }
+
+    .right .dropdown {
+        margin: 0 35px 0 15px;
+    }
+}
+
+@media(max-width: 400px) {
+    .left .logo {
+        font-size: 30px;
+        margin: 0 5px 0 5px;
+    }
+
+    .mainNav form {
+        margin-right: 0;
+    }
+
+    .right .dropdown {
+        margin: 0;
+    }
 }

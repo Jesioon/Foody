@@ -22,8 +22,26 @@ class ShortcutButton {
     }
 }
 
+// class BurgerButton {
+//     constructor() {
+//         this.button = document.getElementById('burgerDiv');
+
+
+//         this.button.addEventListener('click', this.dropdownMenu)
+
+
+//     }
+
+//     dropdownMenu() {
+//         this.classList.toggle('active');
+//     }
+// }
+
+
 if(window.location.pathname === '/'){
-    button = new ShortcutButton();
+    const button = new ShortcutButton();
 }
+
+// const menuRWD = new BurgerButton();
 
 

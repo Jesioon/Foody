@@ -46,7 +46,7 @@ def recipes(request, typeOf, recipeType):
         return render(request, 'foddys/recipes.html', context)
 
     try:
-        recipes = chosenItem.recipe_set.order_by('-likes')    
+        recipes = chosenItem.recipe_set.all()   
     except UnboundLocalError:
         return redirect('foddys:index')
         print('Nie ma chosenItem')

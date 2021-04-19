@@ -1,10 +1,10 @@
 @font-face {
     font-family: "flaticon";
-    src: url("./flaticon.ttf?28dab2f516273353ee9674a0f8729bf6") format("truetype"),
-url("./flaticon.woff?28dab2f516273353ee9674a0f8729bf6") format("woff"),
-url("./flaticon.woff2?28dab2f516273353ee9674a0f8729bf6") format("woff2"),
-url("./flaticon.eot?28dab2f516273353ee9674a0f8729bf6#iefix") format("embedded-opentype"),
-url("./flaticon.svg?28dab2f516273353ee9674a0f8729bf6#flaticon") format("svg");
+    src: url("./flaticon.ttf?034608b600480385d4f4798c43d096bc") format("truetype"),
+url("./flaticon.woff?034608b600480385d4f4798c43d096bc") format("woff"),
+url("./flaticon.woff2?034608b600480385d4f4798c43d096bc") format("woff2"),
+url("./flaticon.eot?034608b600480385d4f4798c43d096bc#iefix") format("embedded-opentype"),
+url("./flaticon.svg?034608b600480385d4f4798c43d096bc#flaticon") format("svg");
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
@@ -24,27 +24,30 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
 .flaticon-gmail:before {
     content: "\f102";
 }
-.flaticon-level:before {
+.flaticon-hamburger:before {
     content: "\f103";
 }
-.flaticon-like:before {
+.flaticon-level:before {
     content: "\f104";
 }
-.flaticon-linkedin:before {
+.flaticon-like:before {
     content: "\f105";
 }
-.flaticon-loupe:before {
+.flaticon-linkedin:before {
     content: "\f106";
 }
-.flaticon-phone-call:before {
+.flaticon-loupe:before {
     content: "\f107";
 }
-.flaticon-time:before {
+.flaticon-phone-call:before {
     content: "\f108";
 }
-.flaticon-user-1:before {
+.flaticon-time:before {
     content: "\f109";
 }
-.flaticon-user:before {
+.flaticon-user-1:before {
     content: "\f10a";
+}
+.flaticon-user:before {
+    content: "\f10b";
 }
