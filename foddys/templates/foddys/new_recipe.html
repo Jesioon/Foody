@@ -4,7 +4,7 @@
 {% block content %}
 <div class="wrap testowanie">
 <div class="ciemno">
-<h1 class='loginRegister'>Dodaj nowy przepis:</h1>
+<h1 class='loginRegister newRecipeHeader'>Dodaj nowy przepis:</h1>
 
 <form enctype="multipart/form-data" action="{% url 'foddys:new_recipe' %}" class='loginRegisterForm'  method="POST">
     {% csrf_token %}

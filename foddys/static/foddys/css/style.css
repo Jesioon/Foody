@@ -81,6 +81,8 @@ div.wrap {
   font-size: 45px;
   font-style: italic;
   letter-spacing: 2px;
+  overflow-x: hidden;
+  padding: 0 30px;
 }
 
 .left .logo:hover {
@@ -626,7 +628,6 @@ div.recipeImg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: cover;
   background-position: 50%, 50%;
 }
 
@@ -727,9 +728,9 @@ p.loginError {
   border: 2px solid red;
 }
 
-@media (max-width: 1680px) {
+@media (max-width: 1720px) {
   .left .logo {
-    margin: 0 40px 0 10px;
+    margin: 0 30px 0 10px;
   }
   .right .dropdown {
     margin-right: 15px;
@@ -778,6 +779,12 @@ p.loginError {
   }
   .left .logo:hover {
     font-size: 45px;
+  }
+  .left .dropdown:first-of-type {
+    margin-right: 20px;
+  }
+  .left .dropdown:last-of-type {
+    margin-right: 0;
   }
   .dropdownContent a,
   .dropdownContent .burgerDiv {
@@ -929,6 +936,10 @@ p.loginError {
     padding-left: 0;
     margin: 0 auto 100px;
   }
+  .loginRegisterForm {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1006,8 +1017,15 @@ p.loginError {
   .recipesList p {
     font-size: 15px;
   }
+  .recipesList .empty {
+    font-size: 25px;
+    text-align: center;
+  }
   div.recipeButtons {
     margin: 0 auto;
+  }
+  .loginRegister.newRecipeHeader {
+    font-size: 35px;
   }
 }
 
@@ -1071,6 +1089,12 @@ p.loginError {
   }
   div.wholeRecipe p {
     font-size: 17px;
+  }
+  h1.loginRegister {
+    font-size: 35px;
+  }
+  .loginRegister.newRecipeHeader {
+    font-size: 30px;
   }
 }
 

@@ -42,18 +42,15 @@ div.ImageAndIngredients {
 div.recipeImg {
     height: 400px;
     flex-basis: 75%;
-    // max-width: 720px;
     margin-bottom: 50px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     background-size: cover;
     background-position: 50%, 50%;
 }
 
 div.recipeIngredients {
     min-height: 300px;
-    // max-width: 720px;
     margin-bottom: 150px;
     min-width: 0;
 }
