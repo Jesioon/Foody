@@ -317,6 +317,19 @@
         background-color: rgba(0, 0, 0, 0);
         font-size: 40px;
     }
+
+    //recipes.scss
+
+    div.recipe:hover, .recipesList>div:hover {
+        transform: scale(1);
+    }
+    
+    div.recipe:hover .darkHover,
+    .recipesList div:hover .darkHover {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
 @media(max-width: 750px) and (hover: none) and (pointer: coarse) {
