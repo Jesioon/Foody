@@ -1,0 +1,338 @@
+@media(max-width: 1680px) {
+    //mainNav.scss
+    .left .logo {
+        margin: 0 40px 0 10px;
+    }
+
+    .right .dropdown {
+        margin-right: 15px;
+    }
+
+    .right .signUp {
+        margin-right: 15px;
+    }
+
+    .right .signIn {
+        margin-right: 10px;
+    }
+
+    #form1 {
+        margin-right: 10px;
+        width: 200px;
+    }
+
+    #buttonSubmit {
+        margin-right: 10px;
+    }
+
+    //recipes.scss
+    .recipesList div {
+        height: 230px;
+        margin-bottom: 100px;
+    }
+
+    .recipesList p {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 1430px) {
+    //mainNav.scss
+    .mainNav a,
+    .mainNav .recipeBtn,
+    .dropdownContent .burgerDiv {
+        font-size: 20px;
+        line-height: 65px;
+    }
+
+    .recipeBtn,
+    .signIn,
+    .signUp,
+    .logo {
+        padding: 0 20px;
+    }
+
+    .left .logo {
+        margin: 0 30px 0 10px;
+        font-size: 40px;
+    }
+
+    .left .logo:hover {
+        font-size: 45px;
+    }
+
+    .dropdownContent a,
+    .dropdownContent .burgerDiv {
+        line-height: 55px;
+    }
+
+    //recipes.scss
+    .recipesList div {
+        height: 200px;
+        margin-bottom: 90px;
+    }
+
+    .recipesList p {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 1120px) {
+    //mainNav.scss
+    .mainNav .left .dropdown,
+    .mainNav .right span.logOut,
+    .mainNav .right .signUp,
+    .mainNav .right .signIn,
+    .right .dropdownContent {
+        display: none;
+    }
+
+    .left .logo {
+        font-size: 45px;
+    }
+
+    .left .logo:hover {
+        font-size: 50px;
+    }
+
+    #form1 {
+        width: 250px;
+    }
+
+    .right .recipeBtn.burger {
+        display: block;
+    }
+
+    .right .dropdownContent.burgerMenu {
+        display: flex;
+    }
+
+    //homepage.scss
+    
+    div.recipes div.recipe {
+        flex-basis: 32%;
+    }
+
+    div.recipe p, .recipesList p {
+        font-size: 23px;
+    }
+
+    //recipes.scss
+    .recipesList div {
+        height: 170px;
+    }
+
+    .recipesList p {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 900px) {
+    //recipes.scss
+    .recipesList div {
+        height: 130px;
+    }
+
+    .recipesList p {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 750px) {
+    //mainNav.scss
+    .left .logo {
+        font-size: 35px;
+    }
+
+    .left .logo:hover {
+        font-size: 40px;
+    }
+
+    .mainNav form {
+        margin-right: 12px;
+    }
+
+    #form1 {
+        width: 200px;
+    }
+
+    .dropdown {
+        margin-right: 20px;
+    }
+
+    // homepage.scss
+    header.mainHeader h1 {
+        font-size: 45px;
+    }
+
+    header.mainHeader a {
+        font-size: 30px;
+    }
+
+    header.mainHeader a:hover {
+        font-size: 35px;
+    }
+
+    section.threeRecipes~.threeRecipes {
+        margin-top: 30px;
+    }
+
+    main h1 {
+        font-size: 45px;
+    }
+
+    div.recipes div.recipe {
+        flex-basis: 70%;
+        margin-bottom: 70px;
+    }
+
+    //recipes.scss
+
+    .recipesList div {
+        flex-basis: 32%;
+    }
+
+
+}
+
+@media(max-width: 565px) {
+    //mainNav.scss
+    .left .logo {
+        margin: 0 10px 0 20px;
+        padding: 0 10px 0 0;
+    }
+
+    .left .logo:hover {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    #form1 {
+        width: 76px;
+    }
+
+    #buttonSubmit {
+        font-size: 21px;
+        margin: 0;
+    }
+
+    .right .dropdown {
+        margin: 0 35px 0 15px;
+    }
+
+    //recipes.scss
+
+    header.recipesPage {
+        height: 30vh;
+    }
+
+    .recipesHeader {
+        font-size: 45px;
+    }    
+
+    .recipesList div {
+        flex-basis: 47%;
+        margin-bottom: 75px;
+    }
+
+    .recipesList p {
+        font-size: 15px;
+    }
+
+
+}
+
+@media(max-width: 400px) {
+    //mainNav.scss
+    .left .logo {
+        font-size: 30px;
+        margin: 0 5px 0 5px;
+    }
+
+    .mainNav form {
+        margin-right: 12px;
+    }
+
+    .right .dropdown {
+        margin: 0;
+    }
+
+    //homepage.scss
+    main h1 {
+        font-size: 40px;
+    }
+
+    div.recipe p, .recipesList p {
+        font-size: 18px;
+    }
+
+    div.recipes div.recipe {
+        margin-bottom: 60px;
+        height: 165px;
+    }
+
+        //recipes.scss
+
+        .recipesList div {
+            height: 105px;
+            margin-bottom: 50px;
+            
+        }
+
+        .recipesList p {
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+}
+
+// FOR DEVICES WITH TOUCH SCREEN
+@media(hover: none) and (pointer: coarse) {
+    //mainNav.scss
+    .dropdownContent a:hover {
+        padding-left: 20px;
+        font-size: 20px;
+    }
+
+    .left .logo:hover {
+        font-size: 45px;
+        letter-spacing: 2px;
+    }
+
+    .dropdown:hover .dropdownContent {
+        transform: scale(0);
+    }
+
+    .right .recipeBtn:hover {
+        background-color: #fff;
+    }
+
+    .right .recipeBtn:hover i {
+        color: black;
+    }
+
+    //homepage.scss
+
+    header.mainHeader a:hover {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 750px) and (hover: none) and (pointer: coarse) {
+    //mainNav.scss
+    .left .logo:hover {
+        font-size: 35px;
+    }
+
+    header.mainHeader a:hover {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 400px) and (hover: none) and (pointer: coarse) {
+    //mainNav.scss
+    .left .logo:hover {
+        font-size: 30px;
+    }
+}

@@ -22,26 +22,30 @@ class ShortcutButton {
     }
 }
 
-// class BurgerButton {
-//     constructor() {
-//         this.button = document.getElementById('burgerDiv');
+class BurgerButton {
+    constructor() {
+        this.button = document.querySelector('.burger');
+        this.menu = document.querySelector('.burgerMenu');
+        this.button.addEventListener('click', this.dropdownMenu.bind(this));    
+    }
 
+    dropdownMenu() {
+        this.button.classList.toggle('active');
 
-//         this.button.addEventListener('click', this.dropdownMenu)
-
-
-//     }
-
-//     dropdownMenu() {
-//         this.classList.toggle('active');
-//     }
-// }
+        if(this.button.classList.contains('active')) {
+            this.menu.style.transform = 'scale(1)';
+        }
+        else {
+            this.menu.style.transform = 'scale(0)';
+        }
+    }
+}
 
 
 if(window.location.pathname === '/'){
     const button = new ShortcutButton();
 }
 
-// const menuRWD = new BurgerButton();
+const menuRWD = new BurgerButton();
 
 

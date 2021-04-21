@@ -67,9 +67,16 @@
       {% endif %}
       <div class="dropdown">
         <div class="dropdownContent burgerMenu">
+          <div class='burgerDiv'>Przepisy</div>
+          <div class='burgerDiv'>Pora dnia</div>
+          {% if user.is_authenticated %}
           <a href="{% url 'foddys:new_recipe' %}">Dodaj przepis</a>
           <a href="{% url 'foddys:my_recipes' %}">Moje przepisy</a>
           <a href="{% url 'users:logout' %}">Wyloguj się</a>
+          {% else %}
+          <a href="{% url 'users:register' %}">Rejestracja</a>
+          <a href="{% url 'users:login' %}">Logowanie</a>
+          {% endif %}
         </div>
       <span class='recipeBtn burger'><i class="flaticon-hamburger"></i></span>
       </div> 

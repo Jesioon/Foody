@@ -35,7 +35,7 @@ div.ImageAndIngredients {
 
 div.recipeImg {
     flex-basis: 400px;
-    width: 100%;
+    max-width: 720px;
     margin-bottom: 50px;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,14 @@ div.recipeImg {
 
 div.recipeIngredients {
     min-height: 300px;
-    width: 100%;
+    max-width: 720px;
+    margin-bottom: 150px;
+}
+
+
+div.recipeIngredients p,
+div.recipeSteps p {
+    word-wrap: break-word;
 }
 
 div.recipeIcons {
@@ -90,5 +97,6 @@ div.recipeIcons span {
 div.recipeSteps {
     min-height: 300px;
     flex-basis: 45%;
+    max-width: 812px;
     padding-left: 100px;
 }

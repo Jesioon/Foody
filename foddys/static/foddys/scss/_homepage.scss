@@ -11,17 +11,16 @@ header.mainHeader {
 
 header.mainHeader h1 {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 51%;
     transform: translate(-50%, -50%);
     font-size: 60px;
     color: #fff;
-    ;
 }
 
 header.mainHeader a {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -59,6 +58,7 @@ main h1 {
 main div.recipes {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -120,3 +120,4 @@ section.ads div.ad {
     height: 250px;
     background-color: #000;
 }
+

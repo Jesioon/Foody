@@ -120,7 +120,8 @@
     // transition: .2s;
 }
 
-.dropdownContent.logOut, .dropdownContent.burgerMenu {
+.dropdownContent.logOut,
+.dropdownContent.burgerMenu {
     background-color: #ff3800;
     left: -150px;
     top: 100%;
@@ -132,16 +133,14 @@
 }
 
 .right .recipeBtn:hover,
-.dropdownContent:hover+.recipeBtn.logOut,
-.dropdownContent:hover+.recipeBtn.burger {
+.dropdownContent:hover+.recipeBtn.logOut {
     background-color: #ff3800;
 }
 
 .right .recipeBtn:hover i,
-.dropdownContent:hover+.recipeBtn.logOut i,
-.dropdownContent:hover+.recipeBtn.burger i {
+.dropdownContent:hover+.recipeBtn.logOut i {
     color: white;
-} 
+}
 
 .dropdown {
     position: relative;
@@ -162,12 +161,14 @@
     // transition: .3s;
 }
 
-.dropdownContent.logOut, .dropdownContent.burgerMenu {
+.dropdownContent.logOut,
+.dropdownContent.burgerMenu {
     transform-origin: 100% 0;
     ;
 }
 
-.dropdownContent a {
+.dropdownContent a,
+.dropdownContent .burgerDiv {
     color: #fff;
     font-size: 20px;
     line-height: 50px;
@@ -218,7 +219,14 @@
     display: none;
     height: 100%;
     padding: 0 35px;
+}
 
+.right .recipeBtn.burger.active {
+    background-color: #ff3800;
+}
+
+.right .recipeBtn.burger.active i {
+    color: #fff;
 }
 
 .right .dropdownContent.burgerMenu {
@@ -232,169 +240,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-} 
-
-
-#burgerDiv.active {
-    background-color: #000;
-    color: #fff;
+    transition: .2s;
 }
 
-
-// RWD START
-
-
-@media(max-width: 1680px) {
-    .left .logo {
-        margin: 0 40px 0 10px;
-    }
-
-    .right .dropdown {
-        margin-right: 15px;
-    }
-
-    .right .signUp {
-        margin-right: 15px;
-    }
-
-    .right .signIn {
-        margin-right: 10px;
-    }
-
-    #form1 {
-        margin-right: 10px;
-        width: 200px;
-    }
-
-    #buttonSubmit {
-        margin-right: 10px;
-    }
-}
-
-@media(max-width: 1430px) {
-
-    .mainNav a,
-    .mainNav .recipeBtn {
-        font-size: 20px;
-        line-height: 65px;
-    }
-
-    .recipeBtn,
-    .signIn,
-    .signUp,
-    .logo {
-        padding: 0 20px;
-    }
-
-    .left .logo {
-        margin: 0 30px 0 10px;
-        font-size: 40px;
-    }
-
-    .left .logo:hover {
-        font-size: 45px;
-    }
-
-    .dropdownContent a {
-        line-height: 55px;
-    }
-
-}
-
-@media(max-width: 1100px) {
-
-    .mainNav .left .dropdown,
-    .mainNav .right span.logOut,
-    .mainNav .right .signUp,
-    .mainNav .right .signIn,
-    .right .dropdownContent
-     {
-        display: none;
-    }
-
-    .left .logo {
-        font-size: 45px;
-    }
-
-    .left .logo:hover {
-        font-size: 50px;
-    }
-
-    #form1 {
-        width: 250px;
-    }
-
-    .right .recipeBtn.burger {
-        display: block;
-    } 
-
-    .right .dropdownContent.burgerMenu {
-        display: flex;
-    }
-}
-
-@media(max-width: 750px) {
-    .left .logo {
-        font-size: 35px;
-    }
-
-    .left .logo:hover {
-        font-size: 40px;
-    }
-
-    .mainNav form {
-        margin: 0;
-    }
-
-    #form1 {
-        width: 200px;
-    }
-
-    .dropdown {
-        margin-right: 20px;
-    }
-}
-
-@media(max-width: 565px) {
-    .left .logo {
-        margin: 0 10px 0 20px;
-        padding: 0 10px 0 0;
-    }
-
-    .left .logo:hover {
-        font-size: 30px;
-        letter-spacing: 2px;
-    }
-
-    // .mainNav form {
-    //     margin-right: 35px;
-    // }
-
-    #form1 {
-        width: 76px;
-    }
-
-    #buttonSubmit {
-        font-size: 21px;
-        margin: 0;
-    }
-
-    .right .dropdown {
-        margin: 0 35px 0 15px;
-    }
-}
-
-@media(max-width: 400px) {
-    .left .logo {
-        font-size: 30px;
-        margin: 0 5px 0 5px;
-    }
-
-    .mainNav form {
-        margin-right: 0;
-    }
-
-    .right .dropdown {
-        margin: 0;
-    }
+.burgerMenu .burgerDiv:last-of-type {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #fff;
 }
