@@ -34,6 +34,12 @@
     .recipesList p {
         font-size: 22px;
     }
+
+    //recipe.scss
+
+    div.recipeIcons span {
+        left: 42%;
+    }
 }
 
 @media(max-width: 1430px) {
@@ -74,6 +80,36 @@
 
     .recipesList p {
         font-size: 22px;
+    }
+
+    //recipe.scss
+
+    div.recipeIcons {
+        padding-left: 20px;
+    }
+
+    div.recipeIcons span {
+        left: 45%;
+    }
+}
+
+@media(max-width: 1350px) {
+    //recipe.scss
+
+    div.recipeIcons {
+        padding-left: 15px;
+    }
+
+    div.recipeIcons p {
+        font-size: 23px;
+    }
+
+    div.recipeIcons p i {
+        font-size: 46px;
+    }
+
+    div.recipeSteps {
+        padding-left: 40px;
     }
 }
 
@@ -125,6 +161,38 @@
     .recipesList p {
         font-size: 20px;
     }
+
+    //recipe.scss
+
+    h1.recipeTitle {
+        padding-top: 35px;
+        font-size: 47px;
+        letter-spacing: 1px;
+    }
+
+
+    div.wholeRecipe h2 {
+        text-align: center;
+        font-size: 34px;
+        border-bottom-width: 4px;
+    }
+
+    div.wholeRecipe p {
+        font-size: 20px;
+    }
+
+    div.recipeIcons {
+        margin-top: 30px;
+    }
+
+    div.recipeIcons p {
+        font-size: 19px;
+        position: relative;
+    }
+
+    div.recipeIcons p i {
+        font-size: 38px;
+    }
 }
 
 @media(max-width: 900px) {
@@ -135,6 +203,48 @@
 
     .recipesList p {
         font-size: 17px;
+    }
+
+    //recipe.scss
+
+    div.ImageAndIngredients {
+        flex-basis: 100%;
+    }    
+
+    div.recipeImg {
+        flex-basis: 90%;
+        margin: 0 auto;
+    }
+
+    div.recipeIcons {
+        flex-basis: 90%;
+        padding: 0;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    div.recipeIcons p {
+        flex-basis: 100px;
+    }
+
+    div.recipeIcons button {
+        margin-bottom: 0;
+    }
+
+    div.recipeIngredients {
+        flex-basis: 90%;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        min-height: 200px;
+    }
+
+    div.recipeSteps {
+        flex-basis: 90%;
+        padding-left: 0;
+        margin: 0 auto 100px;
     }
 }
 
@@ -239,7 +349,21 @@
         font-size: 15px;
     }
 
+    //recipe.scss
 
+    div.recipeButtons {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 500px) {
+    h1.recipeTitle {
+        font-size: 35px;
+    }
+
+    div.wholeRecipe {
+        margin-top: 30px
+    }
 }
 
 @media(max-width: 400px) {
@@ -271,19 +395,49 @@
         height: 165px;
     }
 
-        //recipes.scss
+    //recipes.scss
 
-        .recipesList div {
-            height: 105px;
-            margin-bottom: 50px;
-            
-        }
+    .recipesList div {
+        height: 105px;
+        margin-bottom: 50px;
+        
+    }
 
-        .recipesList p {
-            font-size: 13px;
-            line-height: 15px;
-        }
+    .recipesList p {
+        font-size: 13px;
+        line-height: 15px;
+    }
 
+    //recipe.scss
+
+    h1.recipeTitle {
+        font-size: 32px;
+    }
+    
+    div.recipeImg {
+        height: 300px;
+    }
+
+    div.recipeIcons p {
+        font-size: 16px;
+        flex-basis: 33%;
+    }
+
+    div.recipeIcons p i {
+        font-size: 32px;
+    }
+
+    div.recipeIcons span {
+        left: 40%;
+    }
+
+    div.wholeRecipe h2 {
+        font-size: 28px;
+    }
+
+    div.wholeRecipe p {
+        font-size: 17px;
+    }
 }
 
 // FOR DEVICES WITH TOUCH SCREEN

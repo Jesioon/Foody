@@ -5,6 +5,7 @@ h1.recipeTitle {
     font-size: 58px;
     font-weight: 700;
     letter-spacing: 2px;
+    width: 90%;
 }
 
 div.wholeRecipe {
@@ -12,6 +13,8 @@ div.wholeRecipe {
     align-items: flex-start;
     margin: 65px auto 0 auto;
     width: 95%;
+    flex-wrap: wrap;
+    
 }
 
 div.wholeRecipe h2 {
@@ -28,14 +31,18 @@ div.wholeRecipe p {
 }
 
 div.ImageAndIngredients {
-    flex-basis: 40%;
+    flex-basis: 53%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 0;
 }
 
 div.recipeImg {
-    flex-basis: 400px;
-    max-width: 720px;
+    height: 400px;
+    flex-basis: 75%;
+    // max-width: 720px;
     margin-bottom: 50px;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,8 +53,9 @@ div.recipeImg {
 
 div.recipeIngredients {
     min-height: 300px;
-    max-width: 720px;
+    // max-width: 720px;
     margin-bottom: 150px;
+    min-width: 0;
 }
 
 
@@ -57,8 +65,7 @@ div.recipeSteps p {
 }
 
 div.recipeIcons {
-    flex-basis: 15%;
-    height: 500px;
+    flex-basis: 25%;
     padding-left: 50px;
 }
 
@@ -75,6 +82,10 @@ div.recipeIcons button:first-of-type,
 div.modal-footer button:last-of-type {
     margin-right: 10px;
     padding: 0;
+}
+
+div.recipeIcons button {
+    margin-bottom: 10px;
 }
 
 div.recipeIcons button a,
@@ -97,6 +108,7 @@ div.recipeIcons span {
 div.recipeSteps {
     min-height: 300px;
     flex-basis: 45%;
-    max-width: 812px;
+    // max-width: 812px;
     padding-left: 100px;
+    min-width: 0;
 }

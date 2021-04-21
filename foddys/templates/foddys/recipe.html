@@ -7,17 +7,23 @@
 <div class="wholeRecipe">
     <div class="ImageAndIngredients">
         <div class='recipeImg' style='background-image: url({{recipe.image.url}});'></div>
+        <div class="recipeIcons">
+          <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
+          <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
+          <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
+          {% if recipeOwner %}
+          <div class="recipeButtons">
+          <button type='button' class='btn btn-primary'><a href="{% url 'foddys:edit_recipe' recipe.id %}">Edytuj</a></button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Usuń</button>
+        </div>
+          {% endif %}
+      </div>
         <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients|linebreaks}}</p></div>
+        
+      
+      
     </div>
-    <div class="recipeIcons">
-        <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
-        <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
-        <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
-        {% if recipeOwner %}
-        <button type='button' class='btn btn-primary'><a href="{% url 'foddys:edit_recipe' recipe.id %}">Edytuj</a></button>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Usuń</button>
-        {% endif %}
-    </div>
+    
     <div class="recipeSteps">
         <h2>Krok po kroku:</h2>
         <p>{{recipe.recipe|linebreaks}}</p>
