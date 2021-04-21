@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
 
-// This is for footer stick to bottom of all pages
+// This is for footer stick to bottom of all pages, look reset.scss
     margin-top: auto;
 }
 
@@ -43,7 +43,8 @@
     // display: inline-block;
     text-decoration: none;
     color: #fff;
-    padding: 10px 20px 10px;
+    padding: 10px 20px 0;
+    border-bottom: 1px solid white;
 }
 
 .mainFooter i {
@@ -65,4 +66,5 @@
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 0;
+    width: 100%;
 }

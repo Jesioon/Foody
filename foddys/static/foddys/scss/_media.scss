@@ -203,6 +203,28 @@
     }
 }
 
+@media(max-width: 1000px) {
+    
+    //footer.scss
+    
+    .mainFooter h2 {
+        font-size: 1.5rem;
+    }
+
+    .mainFooter .contact p {
+        padding-top: 10px;
+    }
+
+    .mainFooter section div {
+        font-size: 16px;
+    }
+
+    .mainFooter .links a:hover {
+        font-size: 20px;
+    }
+    
+}
+
 @media(max-width: 900px) {
     //recipes.scss
     .recipesList div {
@@ -389,12 +411,28 @@
 }
 
 @media(max-width: 500px) {
+
     h1.recipeTitle {
         font-size: 35px;
     }
 
     div.wholeRecipe {
         margin-top: 30px
+    }
+
+    //footer.scss
+
+    .mainFooter h2 {
+        font-size: 1.3rem;
+    }
+
+    .mainFooter i {
+        margin-right: 8px;
+    }
+
+    .mainFooter section div.contact {
+        font-size: 14px;
+        flex-basis: 95%;
     }
 }
 
@@ -416,7 +454,7 @@
 
     //homepage.scss
     main h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     div.recipe p, .recipesList p {
@@ -483,6 +521,31 @@
     .loginRegister.newRecipeHeader {
         font-size: 30px;
     }
+
+    //footer.scss
+
+    .mainFooter {
+        height: 270px;
+    }
+
+    .mainFooter i {
+        margin-right: 4px;
+    }
+
+    .mainFooter section {
+        flex-wrap: wrap;
+    }
+
+    .mainFooter section div.links {
+        flex-basis: 95%;
+    }
+    // .mainFooter .links a {
+    //     padding: 10px 5px;
+    // }
+
+    // .mainFooter section div.contact {
+    //     padding-left: 2px;
+    // }
 }
 
 // FOR DEVICES WITH TOUCH SCREEN
@@ -529,6 +592,20 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0);
     }
+
+    //footer.scss
+    .mainFooter .links a:hover {
+        font-size: 18px;
+        border-bottom: 1px solid white;
+    
+    }
+}
+
+@media(max-width: 1000px) and (hover: none) and (pointer: coarse) {
+  //footer.scss
+  .mainFooter .links a:hover {
+    font-size: 16px;
+}
 }
 
 @media(max-width: 750px) and (hover: none) and (pointer: coarse) {

@@ -348,7 +348,8 @@ div.wrap {
 .mainFooter .links a {
   text-decoration: none;
   color: #fff;
-  padding: 10px 20px 10px;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid white;
 }
 
 .mainFooter i {
@@ -370,6 +371,7 @@ div.wrap {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-bottom: 0;
+  width: 100%;
 }
 
 header.mainHeader {
@@ -391,6 +393,7 @@ header.mainHeader h1 {
           transform: translate(-50%, -50%);
   font-size: 60px;
   color: #fff;
+  width: 100%;
 }
 
 header.mainHeader a {
@@ -883,6 +886,21 @@ p.loginError {
   }
 }
 
+@media (max-width: 1000px) {
+  .mainFooter h2 {
+    font-size: 1.5rem;
+  }
+  .mainFooter .contact p {
+    padding-top: 10px;
+  }
+  .mainFooter section div {
+    font-size: 16px;
+  }
+  .mainFooter .links a:hover {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .recipesList div {
     height: 130px;
@@ -1036,6 +1054,17 @@ p.loginError {
   div.wholeRecipe {
     margin-top: 30px;
   }
+  .mainFooter h2 {
+    font-size: 1.3rem;
+  }
+  .mainFooter i {
+    margin-right: 8px;
+  }
+  .mainFooter section div.contact {
+    font-size: 14px;
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1050,7 +1079,7 @@ p.loginError {
     margin: 0;
   }
   main h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   div.recipe p, .recipesList p {
     font-size: 18px;
@@ -1096,6 +1125,20 @@ p.loginError {
   .loginRegister.newRecipeHeader {
     font-size: 30px;
   }
+  .mainFooter {
+    height: 270px;
+  }
+  .mainFooter i {
+    margin-right: 4px;
+  }
+  .mainFooter section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .mainFooter section div.links {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -1130,6 +1173,16 @@ p.loginError {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
+  }
+  .mainFooter .links a:hover {
+    font-size: 18px;
+    border-bottom: 1px solid white;
+  }
+}
+
+@media (max-width: 1000px) and (hover: none) and (pointer: coarse) {
+  .mainFooter .links a:hover {
+    font-size: 16px;
   }
 }
 
