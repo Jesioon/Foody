@@ -412,6 +412,12 @@
 
 @media(max-width: 500px) {
 
+    //homepage.scss
+
+    section.threeRecipes~.threeRecipes {
+        margin-top: 20px;
+    }
+
     h1.recipeTitle {
         font-size: 35px;
     }
@@ -455,6 +461,14 @@
     //homepage.scss
     main h1 {
         font-size: 35px;
+    }
+
+    section.threeRecipes~.threeRecipes {
+        margin-top: 10px;
+    }
+
+    section.threeRecipes:last-of-type {
+        margin-bottom: 70px;
     }
 
     div.recipe p, .recipesList p {
@@ -539,13 +553,6 @@
     .mainFooter section div.links {
         flex-basis: 95%;
     }
-    // .mainFooter .links a {
-    //     padding: 10px 5px;
-    // }
-
-    // .mainFooter section div.contact {
-    //     padding-left: 2px;
-    // }
 }
 
 // FOR DEVICES WITH TOUCH SCREEN
@@ -561,16 +568,14 @@
         letter-spacing: 2px;
     }
 
-    .dropdown:hover .dropdownContent {
-        transform: scale(0);
-    }
-
-    .right .recipeBtn:hover {
+    .right .recipeBtn:hover,
+    .dropdownContent:hover+.recipeBtn.logOut {
         background-color: #fff;
     }
 
-    .right .recipeBtn:hover i {
-        color: black;
+    .right .recipeBtn:hover i,
+    .dropdownContent:hover+.recipeBtn.logOut i {
+        color: #000;
     }
 
     //homepage.scss

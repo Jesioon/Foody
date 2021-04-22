@@ -266,6 +266,8 @@ div.wrap {
   display: none;
   height: 100%;
   padding: 0 35px;
+  color: #000;
+  background-color: #fff;
 }
 
 .right .recipeBtn.burger.active {
@@ -1048,6 +1050,9 @@ p.loginError {
 }
 
 @media (max-width: 500px) {
+  section.threeRecipes ~ .threeRecipes {
+    margin-top: 20px;
+  }
   h1.recipeTitle {
     font-size: 35px;
   }
@@ -1080,6 +1085,12 @@ p.loginError {
   }
   main h1 {
     font-size: 35px;
+  }
+  section.threeRecipes ~ .threeRecipes {
+    margin-top: 10px;
+  }
+  section.threeRecipes:last-of-type {
+    margin-bottom: 70px;
   }
   div.recipe p, .recipesList p {
     font-size: 18px;
@@ -1150,15 +1161,13 @@ p.loginError {
     font-size: 45px;
     letter-spacing: 2px;
   }
-  .dropdown:hover .dropdownContent {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  .right .recipeBtn:hover {
+  .right .recipeBtn:hover,
+  .dropdownContent:hover + .recipeBtn.logOut {
     background-color: #fff;
   }
-  .right .recipeBtn:hover i {
-    color: black;
+  .right .recipeBtn:hover i,
+  .dropdownContent:hover + .recipeBtn.logOut i {
+    color: #000;
   }
   header.mainHeader a:hover {
     background-color: rgba(0, 0, 0, 0);

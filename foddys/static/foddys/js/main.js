@@ -34,9 +34,13 @@ class BurgerButton {
 
         if(this.button.classList.contains('active')) {
             this.menu.style.transform = 'scale(1)';
+            // this.button.style.backgroundColor = '#ff3800';
+            // this.button.style.color = '#fff';
         }
         else {
             this.menu.style.transform = 'scale(0)';
+            // this.button.style.backgroundColor = '#fff';
+            // this.button.style.color = '#000';
         }
     }
 }
