@@ -1,79 +1,72 @@
 {% extends 'foddys/base.html' %}
 
 {% block content %}
-  <header class='mainHeader'>
-    <h1>Pomysł na...</h1>
-    <a href="#" id='buttonMealTime'>Jedzenie</a>
-  </header>
+<header class='mainHeader'>
+  <h1>Pomysł na...</h1>
+  <a href="#" id='buttonMealTime'>Jedzenie</a>
+</header>
 
-    {% if recipes_recent %}
-    <section class='threeRecipes'>
-      <h1>Ostatnio dodane</h1>
-      <div class="recipes">
-        {% for recipe in recipes_recent %}
-        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
-          <div class="darkHover">
-          <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
-        </div>
-        </div>
-
-        {% endfor %}
+{% if recipes_recent %}
+<section class='threeRecipes'>
+  <h1>Ostatnio dodane</h1>
+  <div class="recipes">
+    {% for recipe in recipes_recent %}
+    <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+      <div class="darkHover">
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
       </div>
-    </section>
-    {% endif %}
-    <!-- <section class="ads">
-      <div class="ad clearfix"></div>
-      <div class="ad clearfix"></div>
-    </section> -->
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
-    {% if recipes_quick %}
-    <section class='threeRecipes'>
-      <h1>Dania na szybko</h1>
-      <div class="recipes">
-        {% for recipe in recipes_quick %}
-        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
-          <div class="darkHover">
-          <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
-        </div>
-        </div>
-        {% endfor %}
+{% if recipes_quick %}
+<section class='threeRecipes'>
+  <h1>Dania na szybko</h1>
+  <div class="recipes">
+    {% for recipe in recipes_quick %}
+    <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+      <div class="darkHover">
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
       </div>
-    </section>
-    {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
   
-    {% for mealTime, recipes in meals_context.items %}
-      {% if recipes %}
-        <section class='threeRecipes'>
-        <h1>{{mealTime}}</h1>
-        <div class="recipes">
-        {% for recipe in recipes %}
-        <div class="recipe" style='background-image: url({{recipe.image.url}});'>
-          <div class="darkHover">
-          <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
-        </div>
-        </div>
-        {% endfor %}
-        </div>
-        </section>
-      {% endif %}
+{% for mealTime, recipes in meals_context.items %}
+{% if recipes %}
+<section class='threeRecipes'>
+  <h1>{{mealTime}}</h1>
+  <div class="recipes">
+    {% for recipe in recipes %}
+    <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+      <div class="darkHover">
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
+      </div>
+    </div>
     {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
 
-    {% for country, recipes in countries_context.items %}
-      {% if recipes %}
-        <section class='threeRecipes'>
-        <h1>Kuchnia {{country}}</h1>
-        <div class="recipes">
-          {% for recipe in recipes %}
-          <div class="recipe" style='background-image: url({{recipe.image.url}});'>
-            <div class="darkHover">
-            <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
-          </div>
-          </div>
-          {% endfor %}
-        </div>
-        </section>
-      {% endif %}
-
+{% for country, recipes in countries_context.items %}
+{% if recipes %}
+<section class='threeRecipes'>
+  <h1>Kuchnia {{country}}</h1>
+  <div class="recipes">
+    {% for recipe in recipes %}
+    <div class="recipe" style='background-image: url({{recipe.image.url}});'>
+      <div class="darkHover">
+        <a href="{% url 'foddys:recipe' recipe.id %}"><p>{{recipe.recipe_name}}</p></a>
+      </div>
+    </div>
     {% endfor %}
-
+  </div>
+</section>
+{% endif %}
+{% endfor %}
 {% endblock content %}

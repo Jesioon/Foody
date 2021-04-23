@@ -373,6 +373,12 @@
         margin: 0 35px 0 15px;
     }
 
+    // .right .dropdownContent.burgerMenu {
+    //     width: 100vw;
+    //     height: 100vh;
+    //     left: 0px;
+    // }
+
     //recipes.scss
 
     header.recipesPage {
@@ -411,7 +417,12 @@
 }
 
 @media(max-width: 500px) {
-
+    //mainNav.scss
+    section.przepisyBurger {
+    width: 100%;
+    height: calc(100vh - 65px);
+    }
+    
     //homepage.scss
 
     section.threeRecipes~.threeRecipes {
@@ -576,6 +587,11 @@
     .right .recipeBtn:hover i,
     .dropdownContent:hover+.recipeBtn.logOut i {
         color: #000;
+    }
+
+    .burgerDiv:hover p{
+        padding-left: 20px;
+        font-size: 20px;
     }
 
     //homepage.scss

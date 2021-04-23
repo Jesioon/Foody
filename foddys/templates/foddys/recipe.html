@@ -2,54 +2,49 @@
 
 {% block content %}
 <div class="wrap">
-<h1 class='recipeTitle'>{{recipe.recipe_name}}</h1>
+  <h1 class='recipeTitle'>{{recipe.recipe_name}}</h1>
 
-<div class="wholeRecipe">
+  <div class="wholeRecipe">
     <div class="ImageAndIngredients">
-        <div class='recipeImg' style='background-image: url({{recipe.image.url}});'></div>
-        <div class="recipeIcons">
-          <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
-          <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
-          <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
-          {% if recipeOwner %}
-          <div class="recipeButtons">
+      <div class='recipeImg' style='background-image: url({{recipe.image.url}});'></div>
+      <div class="recipeIcons">
+        <p><i class="flaticon-time"></i><span>{{recipe.time_need}} min.</span></p>
+        <p><i class="flaticon-user"></i><span>{{recipe.portions}} os.</span></p>
+        <p><i class="flaticon-level"></i><span>{{recipeLevel}}</span></p>
+        {% if recipeOwner %}
+        <div class="recipeButtons">
           <button type='button' class='btn btn-primary'><a href="{% url 'foddys:edit_recipe' recipe.id %}">Edytuj</a></button>
           <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Usuń</button>
         </div>
-          {% endif %}
+        {% endif %}
       </div>
-        <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients|linebreaks}}</p></div>
-        
-      
-      
+      <div class="recipeIngredients"><h2>Składniki:</h2><p>{{recipe.ingredients|linebreaks}}</p></div>
     </div>
     
     <div class="recipeSteps">
-        <h2>Krok po kroku:</h2>
-        <p>{{recipe.recipe|linebreaks}}</p>
+      <h2>Krok po kroku:</h2>
+      <p>{{recipe.recipe|linebreaks}}</p>
     </div>
-</div>
+  </div>
 </div>
 
 <!-- Delete recipe modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Usuwanie przepisu</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Czy na pewno chcesz usunąć ten przepis?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-          <button type="button" class="btn btn-danger" id='deleteButton'><a href="{% url 'foddys:delete_recipe' recipe.id %}">Usuń</a> 
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Usuwanie przepisu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </button>
-        </div>
+      </div>
+      <div class="modal-body">Czy na pewno chcesz usunąć ten przepis?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+        <button type="button" class="btn btn-danger" id='deleteButton'><a href="{% url 'foddys:delete_recipe' recipe.id %}">Usuń</a> 
+        </button>
       </div>
     </div>
   </div>
+</div>
 {% endblock content %}

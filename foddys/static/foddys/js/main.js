@@ -26,7 +26,21 @@ class BurgerButton {
     constructor() {
         this.button = document.querySelector('.burger');
         this.menu = document.querySelector('.burgerMenu');
+
+        this.buttonCountry = document.querySelector('.showCountryList');
+        this.buttonTime = document.querySelector('.showTimeList');
+        this.recipesCountry = document.querySelector('.countryList');
+        this.recipesMealTime = document.querySelector('.timeList');
+
+        this.hideCountry = document.querySelector('.hideCountryList');
+        this.hideTime = document.querySelector('.hideTimeList');
+
+        this.buttonCountry.addEventListener('click', this.showCountryList.bind(this));
+        this.buttonTime.addEventListener('click', this.showTimeList.bind(this));
         this.button.addEventListener('click', this.dropdownMenu.bind(this));    
+        this.hideCountry.addEventListener('click', this.hideCountryList.bind(this))
+        this.hideTime.addEventListener('click', this.hideTimeList.bind(this))
+
     }
 
     dropdownMenu() {
@@ -34,14 +48,30 @@ class BurgerButton {
 
         if(this.button.classList.contains('active')) {
             this.menu.style.transform = 'scale(1)';
-            // this.button.style.backgroundColor = '#ff3800';
-            // this.button.style.color = '#fff';
         }
         else {
             this.menu.style.transform = 'scale(0)';
-            // this.button.style.backgroundColor = '#fff';
-            // this.button.style.color = '#000';
+            this.recipesCountry.style.transform = 'scale(0)';
+            this.recipesMealTime.style.transform = 'scale(0)';
         }
+    }
+
+    showCountryList() {
+        this.recipesCountry.style.transform = 'scale(1)';
+        this.recipesMealTime.style.transform = 'scale(0)';
+    }
+
+    showTimeList() {
+        this.recipesMealTime.style.transform = 'scale(1)';
+        this.recipesCountry.style.transform = 'scale(0)';
+    }
+
+    hideCountryList() {
+        this.recipesCountry.style.transform = 'scale(0)';
+    }
+
+    hideTimeList() {
+        this.recipesMealTime.style.transform = 'scale(0)';
     }
 }
 

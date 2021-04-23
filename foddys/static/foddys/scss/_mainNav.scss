@@ -170,7 +170,7 @@
 }
 
 .dropdownContent a,
-.dropdownContent .burgerDiv {
+.dropdownContent .burgerDiv p{
     color: #fff;
     font-size: 20px;
     line-height: 50px;
@@ -225,6 +225,17 @@
     background-color: #fff;
 }
 
+.right .recipeBtn.burger:hover {
+    background-color: #fff;
+}
+.dropdown.burgerDropdown:hover .dropdownContent {
+    transform: scale(0);
+}
+
+.right .recipeBtn.burger:hover i{
+    color: #000;
+}
+
 .right .recipeBtn.burger.active {
     background-color: #ff3800;
 }
@@ -233,8 +244,18 @@
     color: #fff;
 }
 
+.burgerDiv p {
+    margin: 0;
+    transition: .3s;
+}
+.burgerDiv:hover p{
+    padding-left: 45px;
+    font-size: 22px;
+}
+
 .right .dropdownContent.burgerMenu {
     display: none;
+    cursor: pointer;
 }
 
 .right .recipeBtn.burger i {
@@ -251,4 +272,36 @@
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 2px dashed #fff;
+}
+
+section.przepisyBurger {
+    transform: scale(0);
+    position: absolute;
+    background-color: #ff3800;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    height: calc(100vh - 65px);
+    transition: .3s;
+    transform-origin: 50% 0;
+   
+}
+
+section.przepisyBurger a,
+section.przepisyBurger div {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 10vh;
+    cursor: pointer;
+}
+
+section.przepisyBurger div {
+    text-align: center;
+}
+
+section.przepisyBurger i{
+    display: inline-block;
+    transform-origin: 50%, 50%;
+    transform: rotate(-90deg);    
 }

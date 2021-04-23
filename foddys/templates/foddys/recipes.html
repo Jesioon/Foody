@@ -3,17 +3,17 @@
 {% block content %}
 <div class="wrap">
 
-<header class="recipesPage">
-  <div class="ciemno2">
-{% if typeOf == 'country' %}
-<h1 class="recipesHeader">Kuchnia {{recipeType}}</h1>
-{% elif typeOf == 'mealTime' %}
-<h1 class="recipesHeader">{{recipeType}}</h1>
-{% elif typeOf == 'search' %}
-<h1 class="recipesHeader">Znalezione przepisy</h1>
-{% endif %}
-</div>
-</header>
+  <header class="recipesPage">
+    <div class="ciemno2">
+      {% if typeOf == 'country' %}
+      <h1 class="recipesHeader">Kuchnia {{recipeType}}</h1>
+      {% elif typeOf == 'mealTime' %}
+      <h1 class="recipesHeader">{{recipeType}}</h1>
+      {% elif typeOf == 'search' %}
+      <h1 class="recipesHeader">Znalezione przepisy</h1>
+      {% endif %}
+    </div>
+  </header>
   <section class='recipesList'>
     {% for recipe in recipes %}
     <div class='recipeItem' style='background-image: url({{recipe.image.url}});'>
@@ -25,6 +25,5 @@
     <h2 class='empty'>Nie dodano jeszcze żadnego przepisu</h2>
     {% endfor %}
   </section>
-
 </div>
 {% endblock content %}

@@ -212,7 +212,7 @@ div.wrap {
 }
 
 .dropdownContent a,
-.dropdownContent .burgerDiv {
+.dropdownContent .burgerDiv p {
   color: #fff;
   font-size: 20px;
   line-height: 50px;
@@ -270,6 +270,19 @@ div.wrap {
   background-color: #fff;
 }
 
+.right .recipeBtn.burger:hover {
+  background-color: #fff;
+}
+
+.dropdown.burgerDropdown:hover .dropdownContent {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.right .recipeBtn.burger:hover i {
+  color: #000;
+}
+
 .right .recipeBtn.burger.active {
   background-color: #ff3800;
 }
@@ -278,8 +291,20 @@ div.wrap {
   color: #fff;
 }
 
+.burgerDiv p {
+  margin: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.burgerDiv:hover p {
+  padding-left: 45px;
+  font-size: 22px;
+}
+
 .right .dropdownContent.burgerMenu {
   display: none;
+  cursor: pointer;
 }
 
 .right .recipeBtn.burger i {
@@ -298,6 +323,42 @@ div.wrap {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px dashed #fff;
+}
+
+section.przepisyBurger {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  background-color: #ff3800;
+  top: 100%;
+  left: 0;
+  width: 50%;
+  height: calc(100vh - 65px);
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+section.przepisyBurger a,
+section.przepisyBurger div {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 10vh;
+  cursor: pointer;
+}
+
+section.przepisyBurger div {
+  text-align: center;
+}
+
+section.przepisyBurger i {
+  display: inline-block;
+  -webkit-transform-origin: 50%, 50%;
+          transform-origin: 50%, 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .mainFooter {
@@ -640,6 +701,8 @@ div.recipeIngredients {
   min-height: 300px;
   margin-bottom: 150px;
   min-width: 0;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 div.recipeIngredients p,
@@ -1050,6 +1113,10 @@ p.loginError {
 }
 
 @media (max-width: 500px) {
+  section.przepisyBurger {
+    width: 100%;
+    height: calc(100vh - 65px);
+  }
   section.threeRecipes ~ .threeRecipes {
     margin-top: 20px;
   }
@@ -1168,6 +1235,10 @@ p.loginError {
   .right .recipeBtn:hover i,
   .dropdownContent:hover + .recipeBtn.logOut i {
     color: #000;
+  }
+  .burgerDiv:hover p {
+    padding-left: 20px;
+    font-size: 20px;
   }
   header.mainHeader a:hover {
     background-color: rgba(0, 0, 0, 0);
