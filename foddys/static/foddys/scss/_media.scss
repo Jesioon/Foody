@@ -1,5 +1,7 @@
 @media(max-width: 1720px) {
+
     //mainNav.scss
+
     .left .logo {
         margin: 0 30px 0 10px;
     }
@@ -17,8 +19,8 @@
     }
 
     #form1 {
-        margin-right: 10px;
         width: 200px;
+        margin-right: 10px;
     }
 
     #buttonSubmit {
@@ -26,6 +28,7 @@
     }
 
     //recipes.scss
+
     .recipesList div {
         height: 230px;
         margin-bottom: 100px;
@@ -43,12 +46,14 @@
 }
 
 @media(max-width: 1430px) {
+
     //mainNav.scss
+
     .mainNav a,
     .mainNav .recipeBtn,
     .dropdownContent .burgerDiv {
-        font-size: 20px;
         line-height: 65px;
+        font-size: 20px;
     }
 
     .recipeBtn,
@@ -81,6 +86,7 @@
     }
 
     //recipes.scss
+
     .recipesList div {
         height: 200px;
         margin-bottom: 90px;
@@ -102,6 +108,7 @@
 }
 
 @media(max-width: 1350px) {
+
     //recipe.scss
 
     div.recipeIcons {
@@ -122,7 +129,9 @@
 }
 
 @media(max-width: 1120px) {
+
     //mainNav.scss
+
     .mainNav .left .dropdown,
     .mainNav .right span.logOut,
     .mainNav .right .signUp,
@@ -152,16 +161,18 @@
     }
 
     //homepage.scss
-    
+
     div.recipes div.recipe {
         flex-basis: 32%;
     }
 
-    div.recipe p, .recipesList p {
+    div.recipe p,
+    .recipesList p {
         font-size: 23px;
     }
 
     //recipes.scss
+
     .recipesList div {
         height: 170px;
     }
@@ -178,7 +189,6 @@
         letter-spacing: 1px;
     }
 
-
     div.wholeRecipe h2 {
         text-align: center;
         font-size: 34px;
@@ -194,8 +204,10 @@
     }
 
     div.recipeIcons p {
-        font-size: 19px;
         position: relative;
+        top: 0;
+        left: 0;
+        font-size: 19px;
     }
 
     div.recipeIcons p i {
@@ -204,9 +216,9 @@
 }
 
 @media(max-width: 1000px) {
-    
+
     //footer.scss
-    
+
     .mainFooter h2 {
         font-size: 1.5rem;
     }
@@ -222,11 +234,12 @@
     .mainFooter .links a:hover {
         font-size: 20px;
     }
-    
 }
 
 @media(max-width: 900px) {
+
     //recipes.scss
+
     .recipesList div {
         height: 130px;
     }
@@ -239,7 +252,7 @@
 
     div.ImageAndIngredients {
         flex-basis: 100%;
-    }    
+    }
 
     div.recipeImg {
         flex-basis: 90%;
@@ -248,12 +261,12 @@
 
     div.recipeIcons {
         flex-basis: 90%;
-        padding: 0;
-        margin: 30px auto;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
+        padding: 0;
+        margin: 30px auto;
     }
 
     div.recipeIcons p {
@@ -266,15 +279,15 @@
 
     div.recipeIngredients {
         flex-basis: 90%;
+        min-height: 200px;
         margin: 0 auto;
         margin-bottom: 70px;
-        min-height: 200px;
     }
 
     div.recipeSteps {
         flex-basis: 90%;
-        padding-left: 0;
         margin: 0 auto 100px;
+        padding-left: 0;
     }
 
     // //login.scss
@@ -286,7 +299,9 @@
 }
 
 @media(max-width: 750px) {
+
     //mainNav.scss
+
     .left .logo {
         font-size: 35px;
     }
@@ -308,6 +323,7 @@
     }
 
     // homepage.scss
+
     header.mainHeader h1 {
         font-size: 45px;
     }
@@ -338,18 +354,12 @@
     .recipesList div {
         flex-basis: 32%;
     }
-
-    // //login.scss
-
-    // .loginRegisterForm {
-    //     width: 420px;
-    // }
-
-
 }
 
 @media(max-width: 565px) {
+
     //mainNav.scss
+
     .left .logo {
         margin: 0 10px 0 20px;
         padding: 0 10px 0 0;
@@ -373,12 +383,6 @@
         margin: 0 35px 0 15px;
     }
 
-    // .right .dropdownContent.burgerMenu {
-    //     width: 100vw;
-    //     height: 100vh;
-    //     left: 0px;
-    // }
-
     //recipes.scss
 
     header.recipesPage {
@@ -387,7 +391,7 @@
 
     .recipesHeader {
         font-size: 45px;
-    }    
+    }
 
     .recipesList div {
         flex-basis: 47%;
@@ -417,12 +421,14 @@
 }
 
 @media(max-width: 500px) {
+
     //mainNav.scss
+
     section.przepisyBurger {
-    width: 100%;
-    height: calc(100vh - 65px);
+        width: 100%;
+        height: calc(100vh - 65px);
     }
-    
+
     //homepage.scss
 
     section.threeRecipes~.threeRecipes {
@@ -448,17 +454,18 @@
     }
 
     .mainFooter section div.contact {
-        font-size: 14px;
         flex-basis: 95%;
+        font-size: 14px;
     }
 }
 
 @media(max-width: 400px) {
+
     //mainNav.scss
 
     .left .logo {
-        font-size: 30px;
         margin: 0 5px 0 5px;
+        font-size: 30px;
     }
 
     .mainNav form {
@@ -470,6 +477,7 @@
     }
 
     //homepage.scss
+
     main h1 {
         font-size: 35px;
     }
@@ -482,13 +490,14 @@
         margin-bottom: 70px;
     }
 
-    div.recipe p, .recipesList p {
+    div.recipe p,
+    .recipesList p {
         font-size: 18px;
     }
 
     div.recipes div.recipe {
-        margin-bottom: 60px;
         height: 165px;
+        margin-bottom: 60px;
     }
 
     //recipes.scss
@@ -496,12 +505,12 @@
     .recipesList div {
         height: 105px;
         margin-bottom: 50px;
-        
+
     }
 
     .recipesList p {
-        font-size: 13px;
         line-height: 15px;
+        font-size: 13px;
     }
 
     //recipe.scss
@@ -515,8 +524,8 @@
     }
 
     div.recipeIcons p {
-        font-size: 16px;
         flex-basis: 33%;
+        font-size: 16px;
     }
 
     div.recipeIcons p i {
@@ -568,7 +577,9 @@
 
 // FOR DEVICES WITH TOUCH SCREEN
 @media(hover: none) and (pointer: coarse) {
+
     //mainNav.scss
+
     .dropdownContent a:hover {
         padding-left: 20px;
         font-size: 20px;
@@ -589,7 +600,7 @@
         color: #000;
     }
 
-    .burgerDiv:hover p{
+    .burgerDiv:hover p {
         padding-left: 20px;
         font-size: 20px;
     }
@@ -603,10 +614,11 @@
 
     //recipes.scss
 
-    div.recipe:hover, .recipesList>div:hover {
+    div.recipe:hover,
+    .recipesList>div:hover {
         transform: scale(1);
     }
-    
+
     div.recipe:hover .darkHover,
     .recipesList div:hover .darkHover {
         width: 100%;
@@ -615,22 +627,27 @@
     }
 
     //footer.scss
+
     .mainFooter .links a:hover {
         font-size: 18px;
         border-bottom: 1px solid white;
-    
+
     }
 }
 
 @media(max-width: 1000px) and (hover: none) and (pointer: coarse) {
-  //footer.scss
-  .mainFooter .links a:hover {
-    font-size: 16px;
-}
+
+    //footer.scss
+
+    .mainFooter .links a:hover {
+        font-size: 16px;
+    }
 }
 
 @media(max-width: 750px) and (hover: none) and (pointer: coarse) {
+
     //mainNav.scss
+
     .left .logo:hover {
         font-size: 35px;
     }
@@ -641,7 +658,9 @@
 }
 
 @media(max-width: 400px) and (hover: none) and (pointer: coarse) {
+
     //mainNav.scss
+
     .left .logo:hover {
         font-size: 30px;
     }

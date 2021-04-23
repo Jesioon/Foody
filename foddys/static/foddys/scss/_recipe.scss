@@ -1,47 +1,45 @@
 h1.recipeTitle {
+    width: 90%;
+    padding-top: 35px;
     color: #000;
     text-align: center;
-    padding-top: 35px;
     font-size: 58px;
     font-weight: 700;
     letter-spacing: 2px;
-    width: 90%;
 }
 
 div.wholeRecipe {
     display: flex;
-    align-items: flex-start;
-    margin: 65px auto 0 auto;
-    width: 95%;
     flex-wrap: wrap;
-    
+    align-items: flex-start;
+    width: 95%; 
+    margin: 65px auto 0 auto;   
 }
 
 div.wholeRecipe h2 {
     text-align: center;
-    font-size: 40px;
-    padding-bottom: 15px;
-    border-bottom: 5px solid black;
     margin-bottom: 20px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    border-bottom: 5px solid black;
 }
 
 div.wholeRecipe p {
-    font-size: 24px;
     text-align: justify;
+    font-size: 24px;
 }
 
 div.ImageAndIngredients {
     flex-basis: 53%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     min-width: 0;
 }
 
 div.recipeImg {
-    height: 400px;
     flex-basis: 75%;
+    height: 400px;
     margin-bottom: 50px;
     background-position: center;
     background-repeat: no-repeat;
@@ -50,12 +48,11 @@ div.recipeImg {
 }
 
 div.recipeIngredients {
+    flex-basis: 100%;
+    min-width: 0;
     min-height: 300px;
     margin-bottom: 150px;
-    min-width: 0;
-    flex-basis: 100%;
 }
-
 
 div.recipeIngredients p,
 div.recipeSteps p {
@@ -68,8 +65,10 @@ div.recipeIcons {
 }
 
 div.recipeIcons p {
-    font-size: 26px;
     position: relative;
+    top: 0;
+    left: 0;
+    font-size: 26px;
 }
 
 div.recipeIcons p i {
@@ -88,12 +87,12 @@ div.recipeIcons button {
 
 div.recipeIcons button a,
 div.modal-footer button a {
-    color: #fff;
-    text-decoration: none;
     display: block;
     height: 100%;
     width: 100%;
     padding: .375rem .75rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 div.recipeIcons span {
@@ -104,9 +103,8 @@ div.recipeIcons span {
 }
 
 div.recipeSteps {
-    min-height: 300px;
     flex-basis: 45%;
-    // max-width: 812px;
-    padding-left: 100px;
+    min-height: 300px;
     min-width: 0;
+    padding-left: 100px;
 }

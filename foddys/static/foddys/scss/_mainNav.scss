@@ -1,20 +1,20 @@
 .mainNav {
     display: flex;
-    position: fixed;
     top: 0;
     left: 0;
+    position: fixed;
+    z-index: 2;
     width: 100%;
     background-color: #fff;
-    z-index: 2;
     border-bottom: 1px solid black;
 }
 
 .mainNav a,
 .mainNav .recipeBtn {
+    display: block;
+    line-height: 65px;
     text-decoration: none;
     font-size: 25px;
-    line-height: 65px;
-    display: block;
     cursor: pointer;
 }
 
@@ -112,22 +112,21 @@
 }
 
 .right .recipeBtn.logOut i {
-    color: #ff3800;
-    font-size: 40px;
-    line-height: 0;
     position: absolute;
     top: 50%;
     left: 50%;
+    line-height: 0;
     transform: translate(-50%, -50%);
-    // transition: .2s;
+    color: #ff3800;
+    font-size: 40px;
 }
 
 .dropdownContent.logOut,
 .dropdownContent.burgerMenu {
-    background-color: #ff3800;
     left: -150px;
     top: 100%;
     width: 250px;
+    background-color: #ff3800;
 }
 
 .dropdownContent.burgerMenu {
@@ -155,26 +154,24 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 300px;
     top: 100%;
     left: 0;
+    width: 300px;
     transform: scale(0);
     transform-origin: 0 0;
-    // transition: .3s;
 }
 
 .dropdownContent.logOut,
 .dropdownContent.burgerMenu {
     transform-origin: 100% 0;
-    ;
 }
 
 .dropdownContent a,
-.dropdownContent .burgerDiv p{
-    color: #fff;
-    font-size: 20px;
+.dropdownContent .burgerDiv p {
     line-height: 50px;
     padding-left: 20px;
+    color: #fff;
+    font-size: 20px;
     transition: .3s;
 }
 
@@ -187,38 +184,35 @@
     font-size: 22px;
 }
 
-
-
 .mainNav form {
-    margin-right: 25px;
     display: flex;
+    margin-right: 25px;
 }
 
 #form1 {
-    width: 250px;
-    margin-right: 15px;
     position: relative;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    width: 250px;
+    margin-right: 15px;
     border-width: 2px;
-    // display: none;
 }
 
 #buttonSubmit {
-    border: none;
-    background-color: #fff;
-    margin-right: 90px;
-    font-size: 25px;
     position: relative;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    margin-right: 90px;
+    font-size: 25px;
+    border: none;
+    background-color: #fff;
 }
 
 .right .recipeBtn.burger {
-    position: relative;
     display: none;
+    position: relative;
     height: 100%;
     padding: 0 35px;
     color: #000;
@@ -228,11 +222,12 @@
 .right .recipeBtn.burger:hover {
     background-color: #fff;
 }
+
 .dropdown.burgerDropdown:hover .dropdownContent {
     transform: scale(0);
 }
 
-.right .recipeBtn.burger:hover i{
+.right .recipeBtn.burger:hover i {
     color: #000;
 }
 
@@ -248,7 +243,8 @@
     margin: 0;
     transition: .3s;
 }
-.burgerDiv:hover p{
+
+.burgerDiv:hover p {
     padding-left: 45px;
     font-size: 22px;
 }
@@ -259,12 +255,12 @@
 }
 
 .right .recipeBtn.burger i {
-    font-size: 32px;
-    line-height: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 32px;
+    line-height: 0;
     transition: .2s;
 }
 
@@ -275,24 +271,23 @@
 }
 
 section.przepisyBurger {
-    transform: scale(0);
     position: absolute;
-    background-color: #ff3800;
     top: 100%;
     left: 0;
     width: 50%;
     height: calc(100vh - 65px);
+    transform: scale(0);
+    background-color: #ff3800;
     transition: .3s;
     transform-origin: 50% 0;
-   
 }
 
 section.przepisyBurger a,
 section.przepisyBurger div {
+    line-height: 10vh;
     text-align: center;
     color: #fff;
     font-size: 20px;
-    line-height: 10vh;
     cursor: pointer;
 }
 
@@ -300,8 +295,8 @@ section.przepisyBurger div {
     text-align: center;
 }
 
-section.przepisyBurger i{
+section.przepisyBurger i {
     display: inline-block;
     transform-origin: 50%, 50%;
-    transform: rotate(-90deg);    
+    transform: rotate(-90deg);
 }

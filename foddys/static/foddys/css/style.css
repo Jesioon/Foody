@@ -27,21 +27,21 @@ div.wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
   top: 0;
   left: 0;
+  position: fixed;
+  z-index: 2;
   width: 100%;
   background-color: #fff;
-  z-index: 2;
   border-bottom: 1px solid black;
 }
 
 .mainNav a,
 .mainNav .recipeBtn {
+  display: block;
+  line-height: 65px;
   text-decoration: none;
   font-size: 25px;
-  line-height: 65px;
-  display: block;
   cursor: pointer;
 }
 
@@ -148,22 +148,22 @@ div.wrap {
 }
 
 .right .recipeBtn.logOut i {
-  color: #ff3800;
-  font-size: 40px;
-  line-height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
+  line-height: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: #ff3800;
+  font-size: 40px;
 }
 
 .dropdownContent.logOut,
 .dropdownContent.burgerMenu {
-  background-color: #ff3800;
   left: -150px;
   top: 100%;
   width: 250px;
+  background-color: #ff3800;
 }
 
 .dropdownContent.burgerMenu {
@@ -196,9 +196,9 @@ div.wrap {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  width: 300px;
   top: 100%;
   left: 0;
+  width: 300px;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: 0 0;
@@ -213,10 +213,10 @@ div.wrap {
 
 .dropdownContent a,
 .dropdownContent .burgerDiv p {
-  color: #fff;
-  font-size: 20px;
   line-height: 50px;
   padding-left: 20px;
+  color: #fff;
+  font-size: 20px;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -232,38 +232,38 @@ div.wrap {
 }
 
 .mainNav form {
-  margin-right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 25px;
 }
 
 #form1 {
-  width: 250px;
-  margin-right: 15px;
   position: relative;
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  width: 250px;
+  margin-right: 15px;
   border-width: 2px;
 }
 
 #buttonSubmit {
-  border: none;
-  background-color: #fff;
-  margin-right: 90px;
-  font-size: 25px;
   position: relative;
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  margin-right: 90px;
+  font-size: 25px;
+  border: none;
+  background-color: #fff;
 }
 
 .right .recipeBtn.burger {
-  position: relative;
   display: none;
+  position: relative;
   height: 100%;
   padding: 0 35px;
   color: #000;
@@ -308,13 +308,13 @@ div.wrap {
 }
 
 .right .recipeBtn.burger i {
-  font-size: 32px;
-  line-height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-size: 32px;
+  line-height: 0;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -326,14 +326,14 @@ div.wrap {
 }
 
 section.przepisyBurger {
-  -webkit-transform: scale(0);
-          transform: scale(0);
   position: absolute;
-  background-color: #ff3800;
   top: 100%;
   left: 0;
   width: 50%;
   height: calc(100vh - 65px);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-color: #ff3800;
   -webkit-transition: .3s;
   transition: .3s;
   -webkit-transform-origin: 50% 0;
@@ -342,10 +342,10 @@ section.przepisyBurger {
 
 section.przepisyBurger a,
 section.przepisyBurger div {
+  line-height: 10vh;
   text-align: center;
   color: #fff;
   font-size: 20px;
-  line-height: 10vh;
   cursor: pointer;
 }
 
@@ -362,12 +362,12 @@ section.przepisyBurger i {
 }
 
 .mainFooter {
-  height: 180px;
-  background-color: #000;
-  color: #fff;
   position: relative;
   top: 0;
   left: 0;
+  height: 180px;
+  background-color: #000;
+  color: #fff;
   margin-top: auto;
 }
 
@@ -427,12 +427,12 @@ section.przepisyBurger i {
 }
 
 .mainFooter > p:last-child {
-  text-align: center;
   position: absolute;
   bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-align: center;
   margin-bottom: 0;
   width: 100%;
 }
@@ -454,9 +454,9 @@ header.mainHeader h1 {
   left: 51%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
   font-size: 60px;
   color: #fff;
-  width: 100%;
 }
 
 header.mainHeader a {
@@ -499,7 +499,6 @@ main h1 {
 }
 
 main div.recipes {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,55 +506,59 @@ main div.recipes {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
 }
 
 div.recipes div.recipe {
   -ms-flex-preferred-size: 28%;
       flex-basis: 28%;
+  position: relative;
   height: 250px;
   background-size: cover;
   background-position: 50%, 50%;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-div.recipe a, .recipesList a {
-  text-decoration: none;
+div.recipe a,
+.recipesList a {
   display: block;
   height: 100%;
   width: 100%;
+  text-decoration: none;
 }
 
-div.recipe p, .recipesList p {
+div.recipe p,
+.recipesList p {
   position: absolute;
   top: 100%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 105%;
   font-size: 27px;
   -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
-  width: 105%;
   word-wrap: break-word;
   text-align: center;
 }
 
-div.recipe:hover, .recipesList > div:hover {
+div.recipe:hover,
+.recipesList > div:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 div.recipe:hover .darkHover,
 .recipesList div:hover .darkHover {
-  -webkit-transition: .3s;
-  transition: .3s;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 div.recipe:hover p,
@@ -579,30 +582,32 @@ section.ads div.ad {
 }
 
 header.recipesPage {
-  background-image: url("../img/recipesHeaderx1920.jpg");
-  width: 100%;
-  overflow: hidden;
-  height: 40vh;
-  background-size: cover;
   position: relative;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 100%;
+  background-image: url("../img/recipesHeaderx1920.jpg");
+  overflow: hidden;
+  background-size: cover;
 }
 
 .ciemno2 {
-  background-color: rgba(0, 0, 0, 0.35);
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
   color: white;
 }
 
 .recipesHeader {
-  color: white;
-  font-size: 80px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
+  font-size: 80px;
+  color: white;
 }
 
 section.recipesList {
@@ -613,59 +618,60 @@ section.recipesList {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 100px;
   width: 95%;
-  margin: 10vh auto 40px auto;
+  margin: 10vh auto 100px auto;
 }
 
 .recipesList div {
   -ms-flex-preferred-size: 23%;
       flex-basis: 23%;
+  position: relative;
+  top: 0;
+  left: 0;
   height: 280px;
   margin-bottom: 150px;
   background-size: cover;
   background-position: 50%, 50%;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 h1.recipeTitle {
+  width: 90%;
+  padding-top: 35px;
   color: #000;
   text-align: center;
-  padding-top: 35px;
   font-size: 58px;
   font-weight: 700;
   letter-spacing: 2px;
-  width: 90%;
 }
 
 div.wholeRecipe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin: 65px auto 0 auto;
   width: 95%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin: 65px auto 0 auto;
 }
 
 div.wholeRecipe h2 {
   text-align: center;
-  font-size: 40px;
-  padding-bottom: 15px;
-  border-bottom: 5px solid black;
   margin-bottom: 20px;
+  padding-bottom: 15px;
+  font-size: 40px;
+  border-bottom: 5px solid black;
 }
 
 div.wholeRecipe p {
-  font-size: 24px;
   text-align: justify;
+  font-size: 24px;
 }
 
 div.ImageAndIngredients {
@@ -674,10 +680,6 @@ div.ImageAndIngredients {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
@@ -687,9 +689,9 @@ div.ImageAndIngredients {
 }
 
 div.recipeImg {
-  height: 400px;
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
+  height: 400px;
   margin-bottom: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -698,11 +700,11 @@ div.recipeImg {
 }
 
 div.recipeIngredients {
-  min-height: 300px;
-  margin-bottom: 150px;
-  min-width: 0;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  min-width: 0;
+  min-height: 300px;
+  margin-bottom: 150px;
 }
 
 div.recipeIngredients p,
@@ -717,8 +719,10 @@ div.recipeIcons {
 }
 
 div.recipeIcons p {
-  font-size: 26px;
   position: relative;
+  top: 0;
+  left: 0;
+  font-size: 26px;
 }
 
 div.recipeIcons p i {
@@ -737,12 +741,12 @@ div.recipeIcons button {
 
 div.recipeIcons button a,
 div.modal-footer button a {
-  color: #fff;
-  text-decoration: none;
   display: block;
   height: 100%;
   width: 100%;
   padding: .375rem .75rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 div.recipeIcons span {
@@ -754,25 +758,27 @@ div.recipeIcons span {
 }
 
 div.recipeSteps {
-  min-height: 300px;
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
-  padding-left: 100px;
+  min-height: 300px;
   min-width: 0;
+  padding-left: 100px;
 }
 
 .wrap.testowanie {
-  background-image: url("../img/newRecipeHeaderx1920.jpg");
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-image: url("../img/newRecipeHeaderx1920.jpg");
   overflow: hidden;
   background-size: cover;
-  position: relative;
 }
 
 .ciemno {
-  background-color: rgba(0, 0, 0, 0.35);
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
   color: white;
   padding-bottom: 100px;
 }
@@ -810,8 +816,8 @@ p.loginError {
     margin-right: 10px;
   }
   #form1 {
-    margin-right: 10px;
     width: 200px;
+    margin-right: 10px;
   }
   #buttonSubmit {
     margin-right: 10px;
@@ -832,8 +838,8 @@ p.loginError {
   .mainNav a,
   .mainNav .recipeBtn,
   .dropdownContent .burgerDiv {
-    font-size: 20px;
     line-height: 65px;
+    font-size: 20px;
   }
   .recipeBtn,
   .signIn,
@@ -917,7 +923,8 @@ p.loginError {
     -ms-flex-preferred-size: 32%;
         flex-basis: 32%;
   }
-  div.recipe p, .recipesList p {
+  div.recipe p,
+  .recipesList p {
     font-size: 23px;
   }
   .recipesList div {
@@ -943,8 +950,10 @@ p.loginError {
     margin-top: 30px;
   }
   div.recipeIcons p {
-    font-size: 19px;
     position: relative;
+    top: 0;
+    left: 0;
+    font-size: 19px;
   }
   div.recipeIcons p i {
     font-size: 38px;
@@ -985,8 +994,6 @@ p.loginError {
   div.recipeIcons {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    padding: 0;
-    margin: 30px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -998,6 +1005,8 @@ p.loginError {
             align-items: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0;
+    margin: 30px auto;
   }
   div.recipeIcons p {
     -ms-flex-preferred-size: 100px;
@@ -1009,15 +1018,15 @@ p.loginError {
   div.recipeIngredients {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
+    min-height: 200px;
     margin: 0 auto;
     margin-bottom: 70px;
-    min-height: 200px;
   }
   div.recipeSteps {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    padding-left: 0;
     margin: 0 auto 100px;
+    padding-left: 0;
   }
   .loginRegisterForm {
     width: 85%;
@@ -1133,16 +1142,16 @@ p.loginError {
     margin-right: 8px;
   }
   .mainFooter section div.contact {
-    font-size: 14px;
     -ms-flex-preferred-size: 95%;
         flex-basis: 95%;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 400px) {
   .left .logo {
-    font-size: 30px;
     margin: 0 5px 0 5px;
+    font-size: 30px;
   }
   .mainNav form {
     margin-right: 12px;
@@ -1159,20 +1168,21 @@ p.loginError {
   section.threeRecipes:last-of-type {
     margin-bottom: 70px;
   }
-  div.recipe p, .recipesList p {
+  div.recipe p,
+  .recipesList p {
     font-size: 18px;
   }
   div.recipes div.recipe {
-    margin-bottom: 60px;
     height: 165px;
+    margin-bottom: 60px;
   }
   .recipesList div {
     height: 105px;
     margin-bottom: 50px;
   }
   .recipesList p {
-    font-size: 13px;
     line-height: 15px;
+    font-size: 13px;
   }
   h1.recipeTitle {
     font-size: 32px;
@@ -1181,9 +1191,9 @@ p.loginError {
     height: 300px;
   }
   div.recipeIcons p {
-    font-size: 16px;
     -ms-flex-preferred-size: 33%;
         flex-basis: 33%;
+    font-size: 16px;
   }
   div.recipeIcons p i {
     font-size: 32px;
@@ -1244,7 +1254,8 @@ p.loginError {
     background-color: rgba(0, 0, 0, 0);
     font-size: 40px;
   }
-  div.recipe:hover, .recipesList > div:hover {
+  div.recipe:hover,
+  .recipesList > div:hover {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
