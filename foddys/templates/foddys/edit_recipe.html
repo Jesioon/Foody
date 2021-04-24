@@ -2,8 +2,8 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div class="wrap testowanie">
-  <div class="ciemno">
+<div class="wrap backgroundForm">
+  <div class="backgroundDark">
     <h1 class='loginRegister'>Edytuj przepis:</h1>
     
     <form enctype="multipart/form-data" action="{% url 'foddys:edit_recipe' recipe.id %}" class='loginRegisterForm'  method="POST">

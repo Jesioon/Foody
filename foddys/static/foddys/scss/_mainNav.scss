@@ -270,7 +270,7 @@
     border-bottom: 2px dashed #fff;
 }
 
-section.przepisyBurger {
+section.recipesBurger {
     position: absolute;
     top: 100%;
     left: 0;
@@ -282,8 +282,8 @@ section.przepisyBurger {
     transform-origin: 50% 0;
 }
 
-section.przepisyBurger a,
-section.przepisyBurger div {
+section.recipesBurger a,
+section.recipesBurger div {
     line-height: 10vh;
     text-align: center;
     color: #fff;
@@ -291,11 +291,11 @@ section.przepisyBurger div {
     cursor: pointer;
 }
 
-section.przepisyBurger div {
+section.recipesBurger div {
     text-align: center;
 }
 
-section.przepisyBurger i {
+section.recipesBurger i {
     display: inline-block;
     transform-origin: 50%, 50%;
     transform: rotate(-90deg);

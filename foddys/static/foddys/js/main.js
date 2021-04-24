@@ -26,12 +26,10 @@ class BurgerButton {
     constructor() {
         this.button = document.querySelector('.burger');
         this.menu = document.querySelector('.burgerMenu');
-
         this.buttonCountry = document.querySelector('.showCountryList');
         this.buttonTime = document.querySelector('.showTimeList');
         this.recipesCountry = document.querySelector('.countryList');
         this.recipesMealTime = document.querySelector('.timeList');
-
         this.hideCountry = document.querySelector('.hideCountryList');
         this.hideTime = document.querySelector('.hideTimeList');
 
@@ -40,7 +38,6 @@ class BurgerButton {
         this.button.addEventListener('click', this.dropdownMenu.bind(this));    
         this.hideCountry.addEventListener('click', this.hideCountryList.bind(this))
         this.hideTime.addEventListener('click', this.hideTimeList.bind(this))
-
     }
 
     dropdownMenu() {
@@ -74,7 +71,6 @@ class BurgerButton {
         this.recipesMealTime.style.transform = 'scale(0)';
     }
 }
-
 
 if(window.location.pathname === '/'){
     const button = new ShortcutButton();

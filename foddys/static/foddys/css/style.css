@@ -325,7 +325,7 @@ div.wrap {
   border-bottom: 2px dashed #fff;
 }
 
-section.przepisyBurger {
+section.recipesBurger {
   position: absolute;
   top: 100%;
   left: 0;
@@ -340,8 +340,8 @@ section.przepisyBurger {
           transform-origin: 50% 0;
 }
 
-section.przepisyBurger a,
-section.przepisyBurger div {
+section.recipesBurger a,
+section.recipesBurger div {
   line-height: 10vh;
   text-align: center;
   color: #fff;
@@ -349,11 +349,11 @@ section.przepisyBurger div {
   cursor: pointer;
 }
 
-section.przepisyBurger div {
+section.recipesBurger div {
   text-align: center;
 }
 
-section.przepisyBurger i {
+section.recipesBurger i {
   display: inline-block;
   -webkit-transform-origin: 50%, 50%;
           transform-origin: 50%, 50%;
@@ -592,7 +592,7 @@ header.recipesPage {
   background-size: cover;
 }
 
-.ciemno2 {
+.backgroundDark2 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
@@ -700,8 +700,8 @@ div.recipeImg {
 }
 
 div.recipeIngredients {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
   min-width: 0;
   min-height: 300px;
   margin-bottom: 150px;
@@ -765,7 +765,7 @@ div.recipeSteps {
   padding-left: 100px;
 }
 
-.wrap.testowanie {
+.wrap.backgroundForm {
   position: relative;
   top: 0;
   left: 0;
@@ -775,7 +775,7 @@ div.recipeSteps {
   background-size: cover;
 }
 
-.ciemno {
+.backgroundDark {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.35);
