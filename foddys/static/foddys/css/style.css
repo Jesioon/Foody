@@ -763,6 +763,7 @@ div.recipeSteps {
   min-height: 300px;
   min-width: 0;
   padding-left: 100px;
+  margin-bottom: 100px;
 }
 
 .wrap.backgroundForm {
@@ -1122,7 +1123,7 @@ p.loginError {
 }
 
 @media (max-width: 500px) {
-  section.przepisyBurger {
+  section.recipesBurger {
     width: 100%;
     height: calc(100vh - 65px);
   }
