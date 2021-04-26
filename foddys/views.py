@@ -105,7 +105,7 @@ def edit_recipe(request, recipe_id):
     if request.method != 'POST':
         form = RecipeForm(instance=recipe)
     else:
-        form = RecipeForm(instance=recipe, data=request.POST)
+        form = RecipeForm(instance=recipe, data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
             return redirect('foddys:my_recipes')

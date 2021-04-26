@@ -36,7 +36,7 @@ class Recipe(models.Model):
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    image = models.ImageField(blank=True, default='defaultRecipex640.jpg')
+    image = models.ImageField(default='defaultRecipex640.jpg')
 
     EASY = 'ES'
     MEDIUM = 'MM'
