@@ -32,6 +32,6 @@ Technologies:
 # Foody v2.0 (future)
 
 In next version I will try to add some new features:
--users will be able to like their favorite recipes and display a list of them,
--users will be able to comment recipes,
+users will be able to like their favorite recipes and display a list of them,
+users will be able to comment recipes,
 
