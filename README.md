@@ -16,16 +16,17 @@ Button in the center of the home page changes depends on hour and redirect to ap
 Application is full responsive, layout changes depends on screen resolution.
 
 Technologies:
+
   Front-end:
-    -HTML
-    -CSS
-    -Bootstrap4
-    -JavaScript
-    -SCSS/SAAS
+    HTML,
+    CSS,
+    Bootstrap4,
+    JavaScript,
+    SCSS/SAAS,
     
   Back-end:
-    -Python + Django
-    -SQLite3
+    Python + Django,
+    SQLite3,
     
     
 # Foody v2.0 (future)
